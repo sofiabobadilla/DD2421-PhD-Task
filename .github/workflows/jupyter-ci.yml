@@ -23,8 +23,6 @@ jobs:
         python -m pip install --upgrade pip
         pip install nbconvert jupyter nbval pytest
         
-        pip install -r requirements.txt
-        
     - name: Validate Jupyter notebooks
       run: |
         # Check that notebooks are valid JSON
