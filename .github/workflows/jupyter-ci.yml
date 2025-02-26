@@ -33,11 +33,6 @@ jobs:
     - name: Install dependencies
       run: |
         poetry install --no-interaction --no-root  # Install dependencies from pyproject.toml
-
-    - name: Validate Jupyter notebooks
-      run: |
-        poetry run python -c "import glob, json; all(json.load(open(notebook)) for notebook in glob.glob('**/*.ipynb', recursive=True))"
-  
         
     - name: Validate Jupyter notebooks
       run: |
