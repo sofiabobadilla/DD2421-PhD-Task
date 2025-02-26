@@ -21,10 +21,23 @@ jobs:
       with:
         python-version: '3.10'
         
+    - name: Install Poetry
+      run: |
+        curl -sSL https://install.python-poetry.org | python3 -
+        echo "$HOME/.local/bin" >> $GITHUB_PATH  # Ensure Poetry is in PATH
+
+    - name: Configure Poetry
+      run: |
+        poetry config virtualenvs.in-project true  # Create venv inside the project
+
     - name: Install dependencies
       run: |
-        python -m pip install --upgrade pip
-        pip install nbconvert jupyter nbval pytest
+        poetry install --no-interaction --no-root  # Install dependencies from pyproject.toml
+
+    - name: Validate Jupyter notebooks
+      run: |
+        poetry run python -c "import glob, json; all(json.load(open(notebook)) for notebook in glob.glob('**/*.ipynb', recursive=True))"
+  
         
     - name: Validate Jupyter notebooks
       run: |
