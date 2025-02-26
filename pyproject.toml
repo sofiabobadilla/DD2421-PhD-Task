@@ -1,0 +1,27 @@
+[project]
+name = "dd2421-phd-task"
+version = "0.1.0"
+description = "PhD Assignment for dd2421 machine learning course"
+authors = [
+    {name = "sofiabobadilla sofbob@kth.se"}
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "tensorflow (>=2.18.0,<3.0.0)",
+    "matplotlib (>=3.10.0,<4.0.0)",
+    "ipykernel (>=6.29.5,<7.0.0)",
+    "pandas (>=2.2.3,<3.0.0)",
+    "scikit-learn (>=1.6.1,<2.0.0)",
+    "scipy (>=1.15.2,<2.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.dev.dependencies]
+ipykernel = "^6.29.5"
+
