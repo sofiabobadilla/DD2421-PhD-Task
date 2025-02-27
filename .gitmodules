@@ -1,3 +1,6 @@
 [submodule "dataset/smartbugs-curated"]
 	path = dataset/smartbugs-curated
 	url = https://github.com/smartbugs/smartbugs-curated.git
+[submodule "dataset/sb-heists"]
+	path = dataset/sb-heists
+	url = https://github.com/ASSERT-KTH/sb-heists.git
