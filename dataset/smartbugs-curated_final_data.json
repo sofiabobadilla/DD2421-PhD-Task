@@ -1,0 +1,3776 @@
+[
+    {
+        "contract_name": "FibonacciBalance.sol",
+        "contract_path": "dataset/access_control/FibonacciBalance.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/access_control/FibonacciBalance.sol",
+        "pragma_version": "0.4.22",
+        "source": "https://github.com/sigp/solidity-security-blog",
+        "line_number": 31,
+        "vulnerability_category": "access_control",
+        "code": "require(fibonacciLibrary.delegatecall(fibSig, withdrawalCounter));"
+    },
+    {
+        "contract_name": "FibonacciBalance.sol",
+        "contract_path": "dataset/access_control/FibonacciBalance.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/access_control/FibonacciBalance.sol",
+        "pragma_version": "0.4.22",
+        "source": "https://github.com/sigp/solidity-security-blog",
+        "line_number": 38,
+        "vulnerability_category": "access_control",
+        "code": "require(fibonacciLibrary.delegatecall(msg.data));"
+    },
+    {
+        "contract_name": "arbitrary_location_write_simple.sol",
+        "contract_path": "dataset/access_control/arbitrary_location_write_simple.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/access_control/arbitrary_location_write_simple.sol",
+        "pragma_version": "0.4.25",
+        "source": "https://smartcontractsecurity.github.io/SWC-registry/docs/SWC-124#arbitrary-location-write-simplesol",
+        "line_number": 27,
+        "vulnerability_category": "access_control",
+        "code": "require(0 <= bonusCodes.length); // this condition is always true since array lengths are unsigned"
+    },
+    {
+        "contract_name": "incorrect_constructor_name1.sol",
+        "contract_path": "dataset/access_control/incorrect_constructor_name1.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/access_control/incorrect_constructor_name1.sol",
+        "pragma_version": "0.4.24",
+        "source": "https://github.com/trailofbits/not-so-smart-contracts/blob/master/wrong_constructor_name/incorrect_constructor.sol",
+        "line_number": 20,
+        "vulnerability_category": "access_control",
+        "code": "function IamMissing()"
+    },
+    {
+        "contract_name": "incorrect_constructor_name2.sol",
+        "contract_path": "dataset/access_control/incorrect_constructor_name2.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/access_control/incorrect_constructor_name2.sol",
+        "pragma_version": "0.4.24",
+        "source": "https://smartcontractsecurity.github.io/SWC-registry/docs/SWC-118#incorrect-constructor-name1sol",
+        "line_number": 18,
+        "vulnerability_category": "access_control",
+        "code": "function missing()"
+    },
+    {
+        "contract_name": "incorrect_constructor_name3.sol",
+        "contract_path": "dataset/access_control/incorrect_constructor_name3.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/access_control/incorrect_constructor_name3.sol",
+        "pragma_version": "0.4.24",
+        "source": "https://smartcontractsecurity.github.io/SWC-registry/docs/SWC-118#incorrect-constructor-name2sol",
+        "line_number": 17,
+        "vulnerability_category": "access_control",
+        "code": "function Constructor()"
+    },
+    {
+        "contract_name": "mapping_write.sol",
+        "contract_path": "dataset/access_control/mapping_write.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/access_control/mapping_write.sol",
+        "pragma_version": "0.4.24",
+        "source": "https://smartcontractsecurity.github.io/SWC-registry/docs/SWC-124#mapping-writesol",
+        "line_number": 20,
+        "vulnerability_category": "access_control",
+        "code": "map[key] = value;"
+    },
+    {
+        "contract_name": "multiowned_vulnerable.sol",
+        "contract_path": "dataset/access_control/multiowned_vulnerable.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/access_control/multiowned_vulnerable.sol",
+        "pragma_version": "0.4.23",
+        "source": "https://github.com/SmartContractSecurity/SWC-registry/blob/master/test_cases/solidity/unprotected_critical_functions/multiowned_vulnerable/multiowned_vulnerable.sol",
+        "line_number": 38,
+        "vulnerability_category": "access_control",
+        "code": "function newOwner(address _owner) external returns (bool) {"
+    },
+    {
+        "contract_name": "mycontract.sol",
+        "contract_path": "dataset/access_control/mycontract.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/access_control/mycontract.sol",
+        "pragma_version": "0.4.24",
+        "source": "https://consensys.github.io/smart-contract-best-practices/recommendations/#avoid-using-txorigin",
+        "line_number": 20,
+        "vulnerability_category": "access_control",
+        "code": "require(tx.origin == owner);"
+    },
+    {
+        "contract_name": "parity_wallet_bug_1.sol",
+        "contract_path": "dataset/access_control/parity_wallet_bug_1.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/access_control/parity_wallet_bug_1.sol",
+        "pragma_version": "0.4.9",
+        "source": "https://github.com/paritytech/parity-ethereum/blob/4d08e7b0aec46443bf26547b17d10cb302672835/js/src/contracts/snippets/enhanced-wallet.sol#L216",
+        "line_number": 223,
+        "vulnerability_category": "access_control",
+        "code": "function initWallet(address[] _owners, uint _required, uint _daylimit) {"
+    },
+    {
+        "contract_name": "parity_wallet_bug_1.sol",
+        "contract_path": "dataset/access_control/parity_wallet_bug_1.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/access_control/parity_wallet_bug_1.sol",
+        "pragma_version": "0.4.9",
+        "source": "https://github.com/paritytech/parity-ethereum/blob/4d08e7b0aec46443bf26547b17d10cb302672835/js/src/contracts/snippets/enhanced-wallet.sol#L216",
+        "line_number": 437,
+        "vulnerability_category": "access_control",
+        "code": "_walletLibrary.delegatecall(msg.data); //it should have whitelisted specific methods that the user is allowed to call"
+    },
+    {
+        "contract_name": "parity_wallet_bug_2.sol",
+        "contract_path": "dataset/access_control/parity_wallet_bug_2.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/access_control/parity_wallet_bug_2.sol",
+        "pragma_version": "0.4.9",
+        "source": "https://smartcontractsecurity.github.io/SWC-registry/docs/SWC-106#walletlibrarysol",
+        "line_number": 226,
+        "vulnerability_category": "access_control",
+        "code": "function initWallet(address[] _owners, uint _required, uint _daylimit) only_uninitialized {"
+    },
+    {
+        "contract_name": "parity_wallet_bug_2.sol",
+        "contract_path": "dataset/access_control/parity_wallet_bug_2.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/access_control/parity_wallet_bug_2.sol",
+        "pragma_version": "0.4.9",
+        "source": "https://smartcontractsecurity.github.io/SWC-registry/docs/SWC-106#walletlibrarysol",
+        "line_number": 233,
+        "vulnerability_category": "access_control",
+        "code": "function kill(address _to) onlymanyowners(sha3(msg.data)) external {"
+    },
+    {
+        "contract_name": "phishable.sol",
+        "contract_path": "dataset/access_control/phishable.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/access_control/phishable.sol",
+        "pragma_version": "0.4.22",
+        "source": "https://github.com/sigp/solidity-security-blog",
+        "line_number": 20,
+        "vulnerability_category": "access_control",
+        "code": "require(tx.origin == owner);"
+    },
+    {
+        "contract_name": "proxy.sol",
+        "contract_path": "dataset/access_control/proxy.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/access_control/proxy.sol",
+        "pragma_version": "0.4.24",
+        "source": "https://smartcontractsecurity.github.io/SWC-registry/docs/SWC-112#proxysol",
+        "line_number": 19,
+        "vulnerability_category": "access_control",
+        "code": "require(callee.delegatecall(_data)); //Use delegatecall with caution and make sure to never call into untrusted contracts"
+    },
+    {
+        "contract_name": "rubixi.sol",
+        "contract_path": "dataset/access_control/rubixi.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/access_control/rubixi.sol",
+        "pragma_version": "0.4.15",
+        "source": "https://github.com/trailofbits/not-so-smart-contracts/blob/master/wrong_constructor_name/Rubixi_source_code/Rubixi.sol",
+        "line_number": 23,
+        "vulnerability_category": "access_control",
+        "code": "function DynamicPyramid() {"
+    },
+    {
+        "contract_name": "rubixi.sol",
+        "contract_path": "dataset/access_control/rubixi.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/access_control/rubixi.sol",
+        "pragma_version": "0.4.15",
+        "source": "https://github.com/trailofbits/not-so-smart-contracts/blob/master/wrong_constructor_name/Rubixi_source_code/Rubixi.sol",
+        "line_number": 24,
+        "vulnerability_category": "access_control",
+        "code": "creator = msg.sender; //anyone can call this"
+    },
+    {
+        "contract_name": "simple_suicide.sol",
+        "contract_path": "dataset/access_control/simple_suicide.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/access_control/simple_suicide.sol",
+        "pragma_version": "0.4.0",
+        "source": "https://github.com/SmartContractSecurity/SWC-registry/blob/master/test_cases/unprotected_critical_functions/simple_suicide.sol",
+        "line_number": 12,
+        "vulnerability_category": "access_control",
+        "code": "function sudicideAnyone() {"
+    },
+    {
+        "contract_name": "simple_suicide.sol",
+        "contract_path": "dataset/access_control/simple_suicide.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/access_control/simple_suicide.sol",
+        "pragma_version": "0.4.0",
+        "source": "https://github.com/SmartContractSecurity/SWC-registry/blob/master/test_cases/unprotected_critical_functions/simple_suicide.sol",
+        "line_number": 13,
+        "vulnerability_category": "access_control",
+        "code": "selfdestruct(msg.sender);"
+    },
+    {
+        "contract_name": "unprotected0.sol",
+        "contract_path": "dataset/access_control/unprotected0.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/access_control/unprotected0.sol",
+        "pragma_version": "0.4.15",
+        "source": "https://github.com/trailofbits/not-so-smart-contracts/blob/master/unprotected_function/Unprotected.sol",
+        "line_number": 25,
+        "vulnerability_category": "access_control",
+        "code": "function changeOwner(address _newOwner)"
+    },
+    {
+        "contract_name": "wallet_02_refund_nosub.sol",
+        "contract_path": "dataset/access_control/wallet_02_refund_nosub.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/access_control/wallet_02_refund_nosub.sol",
+        "pragma_version": "0.4.24",
+        "source": "https://smartcontractsecurity.github.io/SWC-registry/docs/SWC-105#wallet-02-refund-nosubsol",
+        "line_number": 36,
+        "vulnerability_category": "access_control",
+        "code": "msg.sender.transfer(balances[msg.sender]);"
+    },
+    {
+        "contract_name": "wallet_03_wrong_constructor.sol",
+        "contract_path": "dataset/access_control/wallet_03_wrong_constructor.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/access_control/wallet_03_wrong_constructor.sol",
+        "pragma_version": "0.4.24",
+        "source": "https://smartcontractsecurity.github.io/SWC-registry/docs/SWC-105#wallet-03-wrong-constructorsol",
+        "line_number": 19,
+        "vulnerability_category": "access_control",
+        "code": "function initWallet() public {"
+    },
+    {
+        "contract_name": "wallet_03_wrong_constructor.sol",
+        "contract_path": "dataset/access_control/wallet_03_wrong_constructor.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/access_control/wallet_03_wrong_constructor.sol",
+        "pragma_version": "0.4.24",
+        "source": "https://smartcontractsecurity.github.io/SWC-registry/docs/SWC-105#wallet-03-wrong-constructorsol",
+        "line_number": 20,
+        "vulnerability_category": "access_control",
+        "code": "creator = msg.sender;"
+    },
+    {
+        "contract_name": "wallet_04_confused_sign.sol",
+        "contract_path": "dataset/access_control/wallet_04_confused_sign.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/access_control/wallet_04_confused_sign.sol",
+        "pragma_version": "0.4.24",
+        "source": "https://smartcontractsecurity.github.io/SWC-registry/docs/SWC-105#wallet-04-confused-signsol",
+        "line_number": 30,
+        "vulnerability_category": "access_control",
+        "code": "require(amount >= balances[msg.sender]);"
+    },
+    {
+        "contract_name": "BECToken.sol",
+        "contract_path": "dataset/arithmetic/BECToken.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/arithmetic/BECToken.sol",
+        "pragma_version": "0.4.16",
+        "source": "https://smartcontractsecurity.github.io/SWC-registry/docs/SWC-101#bectokensol",
+        "line_number": 264,
+        "vulnerability_category": "arithmetic",
+        "code": "uint256 amount = uint256(cnt) * _value;"
+    },
+    {
+        "contract_name": "insecure_transfer.sol",
+        "contract_path": "dataset/arithmetic/insecure_transfer.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/arithmetic/insecure_transfer.sol",
+        "pragma_version": "0.4.10",
+        "source": "https://consensys.github.io/smart-contract-best-practices/known_attacks/#front-running-aka-transaction-ordering-dependence",
+        "line_number": 18,
+        "vulnerability_category": "arithmetic",
+        "code": "balanceOf[_to] += _value;"
+    },
+    {
+        "contract_name": "integer_overflow_1.sol",
+        "contract_path": "dataset/arithmetic/integer_overflow_1.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/arithmetic/integer_overflow_1.sol",
+        "pragma_version": "0.4.15",
+        "source": "https://github.com/trailofbits/not-so-smart-contracts/blob/master/integer_overflow/integer_overflow_1.sol",
+        "line_number": 14,
+        "vulnerability_category": "arithmetic",
+        "code": "sellerBalance += value; // possible overflow"
+    },
+    {
+        "contract_name": "integer_overflow_add.sol",
+        "contract_path": "dataset/arithmetic/integer_overflow_add.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/arithmetic/integer_overflow_add.sol",
+        "pragma_version": "0.4.19",
+        "source": "https://github.com/ConsenSys/evm-analyzer-benchmark-suite/blob/master/benchmarks/integer_overflow_add.sol",
+        "line_number": 17,
+        "vulnerability_category": "arithmetic",
+        "code": "count += input;"
+    },
+    {
+        "contract_name": "integer_overflow_benign_1.sol",
+        "contract_path": "dataset/arithmetic/integer_overflow_benign_1.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/arithmetic/integer_overflow_benign_1.sol",
+        "pragma_version": "0.4.19",
+        "source": "https://github.com/SmartContractSecurity/SWC-registry/blob/master/test_cases/integer_overflow_and_underflow/integer_overflow_benign_1.sol",
+        "line_number": 17,
+        "vulnerability_category": "arithmetic",
+        "code": "uint res = count - input;"
+    },
+    {
+        "contract_name": "integer_overflow_mapping_sym_1.sol",
+        "contract_path": "dataset/arithmetic/integer_overflow_mapping_sym_1.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/arithmetic/integer_overflow_mapping_sym_1.sol",
+        "pragma_version": "0.4.11",
+        "source": "https://github.com/SmartContractSecurity/SWC-registry/blob/master/test_cases/integer_overflow_and_underflow/integer_overflow_mapping_sym_1.sol",
+        "line_number": 16,
+        "vulnerability_category": "arithmetic",
+        "code": "map[k] -= v;"
+    },
+    {
+        "contract_name": "integer_overflow_minimal.sol",
+        "contract_path": "dataset/arithmetic/integer_overflow_minimal.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/arithmetic/integer_overflow_minimal.sol",
+        "pragma_version": "0.4.19",
+        "source": "https://github.com/SmartContractSecurity/SWC-registry/blob/master/test_cases/integer_overflow_and_underflow/integer_overflow_minimal.sol",
+        "line_number": 17,
+        "vulnerability_category": "arithmetic",
+        "code": "count -= input;"
+    },
+    {
+        "contract_name": "integer_overflow_mul.sol",
+        "contract_path": "dataset/arithmetic/integer_overflow_mul.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/arithmetic/integer_overflow_mul.sol",
+        "pragma_version": "0.4.19",
+        "source": "https://github.com/SmartContractSecurity/SWC-registry/blob/master/test_cases/integer_overflow_and_underflow/integer_overflow_mul.sol",
+        "line_number": 17,
+        "vulnerability_category": "arithmetic",
+        "code": "count *= input;"
+    },
+    {
+        "contract_name": "integer_overflow_multitx_multifunc_feasible.sol",
+        "contract_path": "dataset/arithmetic/integer_overflow_multitx_multifunc_feasible.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/arithmetic/integer_overflow_multitx_multifunc_feasible.sol",
+        "pragma_version": "0.4.23",
+        "source": "https://github.com/ConsenSys/evm-analyzer-benchmark-suite",
+        "line_number": 25,
+        "vulnerability_category": "arithmetic",
+        "code": "count -= input;"
+    },
+    {
+        "contract_name": "integer_overflow_multitx_onefunc_feasible.sol",
+        "contract_path": "dataset/arithmetic/integer_overflow_multitx_onefunc_feasible.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/arithmetic/integer_overflow_multitx_onefunc_feasible.sol",
+        "pragma_version": "0.4.23",
+        "source": "https://github.com/ConsenSys/evm-analyzer-benchmark-suite",
+        "line_number": 22,
+        "vulnerability_category": "arithmetic",
+        "code": "count -= input;"
+    },
+    {
+        "contract_name": "overflow_simple_add.sol",
+        "contract_path": "dataset/arithmetic/overflow_simple_add.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/arithmetic/overflow_simple_add.sol",
+        "pragma_version": "0.4.25",
+        "source": "https://smartcontractsecurity.github.io/SWC-registry/docs/SWC-101#overflow-simple-addsol",
+        "line_number": 14,
+        "vulnerability_category": "arithmetic",
+        "code": "balance += deposit;"
+    },
+    {
+        "contract_name": "overflow_single_tx.sol",
+        "contract_path": "dataset/arithmetic/overflow_single_tx.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/arithmetic/overflow_single_tx.sol",
+        "pragma_version": "0.4.23",
+        "source": "https://github.com/ConsenSys/evm-analyzer-benchmark-suite",
+        "line_number": 18,
+        "vulnerability_category": "arithmetic",
+        "code": "count += input;"
+    },
+    {
+        "contract_name": "overflow_single_tx.sol",
+        "contract_path": "dataset/arithmetic/overflow_single_tx.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/arithmetic/overflow_single_tx.sol",
+        "pragma_version": "0.4.23",
+        "source": "https://github.com/ConsenSys/evm-analyzer-benchmark-suite",
+        "line_number": 24,
+        "vulnerability_category": "arithmetic",
+        "code": "count *= input;"
+    },
+    {
+        "contract_name": "overflow_single_tx.sol",
+        "contract_path": "dataset/arithmetic/overflow_single_tx.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/arithmetic/overflow_single_tx.sol",
+        "pragma_version": "0.4.23",
+        "source": "https://github.com/ConsenSys/evm-analyzer-benchmark-suite",
+        "line_number": 30,
+        "vulnerability_category": "arithmetic",
+        "code": "count -= input;"
+    },
+    {
+        "contract_name": "overflow_single_tx.sol",
+        "contract_path": "dataset/arithmetic/overflow_single_tx.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/arithmetic/overflow_single_tx.sol",
+        "pragma_version": "0.4.23",
+        "source": "https://github.com/ConsenSys/evm-analyzer-benchmark-suite",
+        "line_number": 36,
+        "vulnerability_category": "arithmetic",
+        "code": "uint res = count + input;"
+    },
+    {
+        "contract_name": "overflow_single_tx.sol",
+        "contract_path": "dataset/arithmetic/overflow_single_tx.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/arithmetic/overflow_single_tx.sol",
+        "pragma_version": "0.4.23",
+        "source": "https://github.com/ConsenSys/evm-analyzer-benchmark-suite",
+        "line_number": 42,
+        "vulnerability_category": "arithmetic",
+        "code": "uint res = count * input;"
+    },
+    {
+        "contract_name": "overflow_single_tx.sol",
+        "contract_path": "dataset/arithmetic/overflow_single_tx.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/arithmetic/overflow_single_tx.sol",
+        "pragma_version": "0.4.23",
+        "source": "https://github.com/ConsenSys/evm-analyzer-benchmark-suite",
+        "line_number": 48,
+        "vulnerability_category": "arithmetic",
+        "code": "uint res = count - input;"
+    },
+    {
+        "contract_name": "timelock.sol",
+        "contract_path": "dataset/arithmetic/timelock.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/arithmetic/timelock.sol",
+        "pragma_version": "0.4.10",
+        "source": "https://github.com/sigp/solidity-security-blog",
+        "line_number": 22,
+        "vulnerability_category": "arithmetic",
+        "code": "lockTime[msg.sender] += _secondsToIncrease;"
+    },
+    {
+        "contract_name": "token.sol",
+        "contract_path": "dataset/arithmetic/token.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/arithmetic/token.sol",
+        "pragma_version": "0.4.18",
+        "source": "https://github.com/sigp/solidity-security-blog",
+        "line_number": 20,
+        "vulnerability_category": "arithmetic",
+        "code": "require(balances[msg.sender] - _value >= 0);"
+    },
+    {
+        "contract_name": "token.sol",
+        "contract_path": "dataset/arithmetic/token.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/arithmetic/token.sol",
+        "pragma_version": "0.4.18",
+        "source": "https://github.com/sigp/solidity-security-blog",
+        "line_number": 22,
+        "vulnerability_category": "arithmetic",
+        "code": "balances[msg.sender] -= _value;"
+    },
+    {
+        "contract_name": "tokensalechallenge.sol",
+        "contract_path": "dataset/arithmetic/tokensalechallenge.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/arithmetic/tokensalechallenge.sol",
+        "pragma_version": "0.4.21",
+        "source": "https://smartcontractsecurity.github.io/SWC-registry/docs/SWC-101 // https://capturetheether.com/challenges/math/token-sale/",
+        "line_number": 23,
+        "vulnerability_category": "arithmetic",
+        "code": "require(msg.value == numTokens * PRICE_PER_TOKEN);"
+    },
+    {
+        "contract_name": "tokensalechallenge.sol",
+        "contract_path": "dataset/arithmetic/tokensalechallenge.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/arithmetic/tokensalechallenge.sol",
+        "pragma_version": "0.4.21",
+        "source": "https://smartcontractsecurity.github.io/SWC-registry/docs/SWC-101 // https://capturetheether.com/challenges/math/token-sale/",
+        "line_number": 25,
+        "vulnerability_category": "arithmetic",
+        "code": "balanceOf[msg.sender] += numTokens;"
+    },
+    {
+        "contract_name": "tokensalechallenge.sol",
+        "contract_path": "dataset/arithmetic/tokensalechallenge.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/arithmetic/tokensalechallenge.sol",
+        "pragma_version": "0.4.21",
+        "source": "https://smartcontractsecurity.github.io/SWC-registry/docs/SWC-101 // https://capturetheether.com/challenges/math/token-sale/",
+        "line_number": 33,
+        "vulnerability_category": "arithmetic",
+        "code": "msg.sender.transfer(numTokens * PRICE_PER_TOKEN);"
+    },
+    {
+        "contract_name": "blackjack.sol",
+        "contract_path": "dataset/bad_randomness/blackjack.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/bad_randomness/blackjack.sol",
+        "pragma_version": "0.4.9",
+        "source": "https://etherscan.io/address/0xa65d59708838581520511d98fb8b5d1f76a96cad#code",
+        "line_number": 17,
+        "vulnerability_category": "bad_randomness",
+        "code": "uint b = block.number;"
+    },
+    {
+        "contract_name": "blackjack.sol",
+        "contract_path": "dataset/bad_randomness/blackjack.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/bad_randomness/blackjack.sol",
+        "pragma_version": "0.4.9",
+        "source": "https://etherscan.io/address/0xa65d59708838581520511d98fb8b5d1f76a96cad#code",
+        "line_number": 19,
+        "vulnerability_category": "bad_randomness",
+        "code": "uint timestamp = block.timestamp;"
+    },
+    {
+        "contract_name": "blackjack.sol",
+        "contract_path": "dataset/bad_randomness/blackjack.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/bad_randomness/blackjack.sol",
+        "pragma_version": "0.4.9",
+        "source": "https://etherscan.io/address/0xa65d59708838581520511d98fb8b5d1f76a96cad#code",
+        "line_number": 21,
+        "vulnerability_category": "bad_randomness",
+        "code": "return uint8(uint256(keccak256(block.blockhash(b), player, cardNumber, timestamp)) % 52);"
+    },
+    {
+        "contract_name": "etheraffle.sol",
+        "contract_path": "dataset/bad_randomness/etheraffle.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/bad_randomness/etheraffle.sol",
+        "pragma_version": "0.4.16",
+        "source": "https://etherscan.io/address/0xcC88937F325d1C6B97da0AFDbb4cA542EFA70870#code",
+        "line_number": 49,
+        "vulnerability_category": "bad_randomness",
+        "code": "uint public blockNumber = block.number;"
+    },
+    {
+        "contract_name": "etheraffle.sol",
+        "contract_path": "dataset/bad_randomness/etheraffle.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/bad_randomness/etheraffle.sol",
+        "pragma_version": "0.4.16",
+        "source": "https://etherscan.io/address/0xcC88937F325d1C6B97da0AFDbb4cA542EFA70870#code",
+        "line_number": 99,
+        "vulnerability_category": "bad_randomness",
+        "code": "address seed1 = contestants[uint(block.coinbase) % totalTickets].addr;"
+    },
+    {
+        "contract_name": "etheraffle.sol",
+        "contract_path": "dataset/bad_randomness/etheraffle.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/bad_randomness/etheraffle.sol",
+        "pragma_version": "0.4.16",
+        "source": "https://etherscan.io/address/0xcC88937F325d1C6B97da0AFDbb4cA542EFA70870#code",
+        "line_number": 101,
+        "vulnerability_category": "bad_randomness",
+        "code": "address seed2 = contestants[uint(msg.sender) % totalTickets].addr;"
+    },
+    {
+        "contract_name": "etheraffle.sol",
+        "contract_path": "dataset/bad_randomness/etheraffle.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/bad_randomness/etheraffle.sol",
+        "pragma_version": "0.4.16",
+        "source": "https://etherscan.io/address/0xcC88937F325d1C6B97da0AFDbb4cA542EFA70870#code",
+        "line_number": 103,
+        "vulnerability_category": "bad_randomness",
+        "code": "uint seed3 = block.difficulty;"
+    },
+    {
+        "contract_name": "etheraffle.sol",
+        "contract_path": "dataset/bad_randomness/etheraffle.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/bad_randomness/etheraffle.sol",
+        "pragma_version": "0.4.16",
+        "source": "https://etherscan.io/address/0xcC88937F325d1C6B97da0AFDbb4cA542EFA70870#code",
+        "line_number": 114,
+        "vulnerability_category": "bad_randomness",
+        "code": "blockNumber = block.number;"
+    },
+    {
+        "contract_name": "etheraffle.sol",
+        "contract_path": "dataset/bad_randomness/etheraffle.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/bad_randomness/etheraffle.sol",
+        "pragma_version": "0.4.16",
+        "source": "https://etherscan.io/address/0xcC88937F325d1C6B97da0AFDbb4cA542EFA70870#code",
+        "line_number": 158,
+        "vulnerability_category": "bad_randomness",
+        "code": "blockNumber = block.number;"
+    },
+    {
+        "contract_name": "guess_the_random_number.sol",
+        "contract_path": "dataset/bad_randomness/guess_the_random_number.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/bad_randomness/guess_the_random_number.sol",
+        "pragma_version": "0.4.21",
+        "source": "https://capturetheether.com/challenges/lotteries/guess-the-random-number/",
+        "line_number": 15,
+        "vulnerability_category": "bad_randomness",
+        "code": "answer = uint8(keccak256(block.blockhash(block.number - 1), now));"
+    },
+    {
+        "contract_name": "lottery.sol",
+        "contract_path": "dataset/bad_randomness/lottery.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/bad_randomness/lottery.sol",
+        "pragma_version": "0.4.0",
+        "source": "https://etherscan.io/address/0x80ddae5251047d6ceb29765f38fed1c0013004b7#code",
+        "line_number": 38,
+        "vulnerability_category": "bad_randomness",
+        "code": "bool won = (block.number % 2) == 0;"
+    },
+    {
+        "contract_name": "lottery.sol",
+        "contract_path": "dataset/bad_randomness/lottery.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/bad_randomness/lottery.sol",
+        "pragma_version": "0.4.0",
+        "source": "https://etherscan.io/address/0x80ddae5251047d6ceb29765f38fed1c0013004b7#code",
+        "line_number": 42,
+        "vulnerability_category": "bad_randomness",
+        "code": "bets.push(Bet(msg.value, block.number, won));"
+    },
+    {
+        "contract_name": "lucky_doubler.sol",
+        "contract_path": "dataset/bad_randomness/lucky_doubler.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/bad_randomness/lucky_doubler.sol",
+        "pragma_version": "0.4.0",
+        "source": "https://etherscan.io/address/0xF767fCA8e65d03fE16D4e38810f5E5376c3372A8#code",
+        "line_number": 127,
+        "vulnerability_category": "bad_randomness",
+        "code": "function rand(uint max) constant private returns (uint256 result){"
+    },
+    {
+        "contract_name": "lucky_doubler.sol",
+        "contract_path": "dataset/bad_randomness/lucky_doubler.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/bad_randomness/lucky_doubler.sol",
+        "pragma_version": "0.4.0",
+        "source": "https://etherscan.io/address/0xF767fCA8e65d03fE16D4e38810f5E5376c3372A8#code",
+        "line_number": 128,
+        "vulnerability_category": "bad_randomness",
+        "code": "uint256 factor = FACTOR * 100 / max;"
+    },
+    {
+        "contract_name": "lucky_doubler.sol",
+        "contract_path": "dataset/bad_randomness/lucky_doubler.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/bad_randomness/lucky_doubler.sol",
+        "pragma_version": "0.4.0",
+        "source": "https://etherscan.io/address/0xF767fCA8e65d03fE16D4e38810f5E5376c3372A8#code",
+        "line_number": 129,
+        "vulnerability_category": "bad_randomness",
+        "code": "uint256 lastBlockNumber = block.number - 1;"
+    },
+    {
+        "contract_name": "lucky_doubler.sol",
+        "contract_path": "dataset/bad_randomness/lucky_doubler.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/bad_randomness/lucky_doubler.sol",
+        "pragma_version": "0.4.0",
+        "source": "https://etherscan.io/address/0xF767fCA8e65d03fE16D4e38810f5E5376c3372A8#code",
+        "line_number": 130,
+        "vulnerability_category": "bad_randomness",
+        "code": "uint256 hashVal = uint256(block.blockhash(lastBlockNumber));"
+    },
+    {
+        "contract_name": "lucky_doubler.sol",
+        "contract_path": "dataset/bad_randomness/lucky_doubler.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/bad_randomness/lucky_doubler.sol",
+        "pragma_version": "0.4.0",
+        "source": "https://etherscan.io/address/0xF767fCA8e65d03fE16D4e38810f5E5376c3372A8#code",
+        "line_number": 132,
+        "vulnerability_category": "bad_randomness",
+        "code": "return uint256((uint256(hashVal) / factor)) % max;"
+    },
+    {
+        "contract_name": "old_blockhash.sol",
+        "contract_path": "dataset/bad_randomness/old_blockhash.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/bad_randomness/old_blockhash.sol",
+        "pragma_version": "0.4.24",
+        "source": "https://github.com/SmartContractSecurity/SWC-registry/blob/master/test_cases/weak_randomness/old_blockhash.sol",
+        "line_number": 35,
+        "vulnerability_category": "bad_randomness",
+        "code": "bytes32 answer = blockhash(guesses[msg.sender].block);"
+    },
+    {
+        "contract_name": "random_number_generator.sol",
+        "contract_path": "dataset/bad_randomness/random_number_generator.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/bad_randomness/random_number_generator.sol",
+        "pragma_version": "0.4.25",
+        "source": "https://github.com/SmartContractSecurity/SWC-registry/blob/master/test_cases/weak_randomness/random_number_generator.sol",
+        "line_number": 12,
+        "vulnerability_category": "bad_randomness",
+        "code": "uint256 private salt =  block.timestamp;"
+    },
+    {
+        "contract_name": "random_number_generator.sol",
+        "contract_path": "dataset/bad_randomness/random_number_generator.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/bad_randomness/random_number_generator.sol",
+        "pragma_version": "0.4.25",
+        "source": "https://github.com/SmartContractSecurity/SWC-registry/blob/master/test_cases/weak_randomness/random_number_generator.sol",
+        "line_number": 18,
+        "vulnerability_category": "bad_randomness",
+        "code": "uint256 y = salt * block.number / (salt % 5);"
+    },
+    {
+        "contract_name": "random_number_generator.sol",
+        "contract_path": "dataset/bad_randomness/random_number_generator.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/bad_randomness/random_number_generator.sol",
+        "pragma_version": "0.4.25",
+        "source": "https://github.com/SmartContractSecurity/SWC-registry/blob/master/test_cases/weak_randomness/random_number_generator.sol",
+        "line_number": 20,
+        "vulnerability_category": "bad_randomness",
+        "code": "uint256 seed = block.number / 3 + (salt % 300) + y;"
+    },
+    {
+        "contract_name": "random_number_generator.sol",
+        "contract_path": "dataset/bad_randomness/random_number_generator.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/bad_randomness/random_number_generator.sol",
+        "pragma_version": "0.4.25",
+        "source": "https://github.com/SmartContractSecurity/SWC-registry/blob/master/test_cases/weak_randomness/random_number_generator.sol",
+        "line_number": 22,
+        "vulnerability_category": "bad_randomness",
+        "code": "uint256 h = uint256(blockhash(seed));"
+    },
+    {
+        "contract_name": "smart_billions.sol",
+        "contract_path": "dataset/bad_randomness/smart_billions.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/bad_randomness/smart_billions.sol",
+        "pragma_version": "0.4.13",
+        "source": "https://etherscan.io/address/0x5ace17f87c7391e5792a7683069a8025b83bbd85#code",
+        "line_number": 523,
+        "vulnerability_category": "bad_randomness",
+        "code": "return(betPrize(player,uint24(block.blockhash(player.blockNum))));"
+    },
+    {
+        "contract_name": "smart_billions.sol",
+        "contract_path": "dataset/bad_randomness/smart_billions.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/bad_randomness/smart_billions.sol",
+        "pragma_version": "0.4.13",
+        "source": "https://etherscan.io/address/0x5ace17f87c7391e5792a7683069a8025b83bbd85#code",
+        "line_number": 560,
+        "vulnerability_category": "bad_randomness",
+        "code": "hash = uint24(block.blockhash(player.blockNum));"
+    },
+    {
+        "contract_name": "smart_billions.sol",
+        "contract_path": "dataset/bad_randomness/smart_billions.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/bad_randomness/smart_billions.sol",
+        "pragma_version": "0.4.13",
+        "source": "https://etherscan.io/address/0x5ace17f87c7391e5792a7683069a8025b83bbd85#code",
+        "line_number": 700,
+        "vulnerability_category": "bad_randomness",
+        "code": "return( ( uint(block.blockhash(_lastb  )) & 0xFFFFFF )"
+    },
+    {
+        "contract_name": "smart_billions.sol",
+        "contract_path": "dataset/bad_randomness/smart_billions.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/bad_randomness/smart_billions.sol",
+        "pragma_version": "0.4.13",
+        "source": "https://etherscan.io/address/0x5ace17f87c7391e5792a7683069a8025b83bbd85#code",
+        "line_number": 702,
+        "vulnerability_category": "bad_randomness",
+        "code": "| ( ( uint(block.blockhash(_lastb+1)) & 0xFFFFFF ) << 24 )"
+    },
+    {
+        "contract_name": "smart_billions.sol",
+        "contract_path": "dataset/bad_randomness/smart_billions.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/bad_randomness/smart_billions.sol",
+        "pragma_version": "0.4.13",
+        "source": "https://etherscan.io/address/0x5ace17f87c7391e5792a7683069a8025b83bbd85#code",
+        "line_number": 704,
+        "vulnerability_category": "bad_randomness",
+        "code": "| ( ( uint(block.blockhash(_lastb+2)) & 0xFFFFFF ) << 48 )"
+    },
+    {
+        "contract_name": "smart_billions.sol",
+        "contract_path": "dataset/bad_randomness/smart_billions.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/bad_randomness/smart_billions.sol",
+        "pragma_version": "0.4.13",
+        "source": "https://etherscan.io/address/0x5ace17f87c7391e5792a7683069a8025b83bbd85#code",
+        "line_number": 706,
+        "vulnerability_category": "bad_randomness",
+        "code": "| ( ( uint(block.blockhash(_lastb+3)) & 0xFFFFFF ) << 72 )"
+    },
+    {
+        "contract_name": "smart_billions.sol",
+        "contract_path": "dataset/bad_randomness/smart_billions.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/bad_randomness/smart_billions.sol",
+        "pragma_version": "0.4.13",
+        "source": "https://etherscan.io/address/0x5ace17f87c7391e5792a7683069a8025b83bbd85#code",
+        "line_number": 708,
+        "vulnerability_category": "bad_randomness",
+        "code": "| ( ( uint(block.blockhash(_lastb+4)) & 0xFFFFFF ) << 96 )"
+    },
+    {
+        "contract_name": "smart_billions.sol",
+        "contract_path": "dataset/bad_randomness/smart_billions.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/bad_randomness/smart_billions.sol",
+        "pragma_version": "0.4.13",
+        "source": "https://etherscan.io/address/0x5ace17f87c7391e5792a7683069a8025b83bbd85#code",
+        "line_number": 710,
+        "vulnerability_category": "bad_randomness",
+        "code": "| ( ( uint(block.blockhash(_lastb+5)) & 0xFFFFFF ) << 120 )"
+    },
+    {
+        "contract_name": "smart_billions.sol",
+        "contract_path": "dataset/bad_randomness/smart_billions.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/bad_randomness/smart_billions.sol",
+        "pragma_version": "0.4.13",
+        "source": "https://etherscan.io/address/0x5ace17f87c7391e5792a7683069a8025b83bbd85#code",
+        "line_number": 712,
+        "vulnerability_category": "bad_randomness",
+        "code": "| ( ( uint(block.blockhash(_lastb+6)) & 0xFFFFFF ) << 144 )"
+    },
+    {
+        "contract_name": "smart_billions.sol",
+        "contract_path": "dataset/bad_randomness/smart_billions.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/bad_randomness/smart_billions.sol",
+        "pragma_version": "0.4.13",
+        "source": "https://etherscan.io/address/0x5ace17f87c7391e5792a7683069a8025b83bbd85#code",
+        "line_number": 714,
+        "vulnerability_category": "bad_randomness",
+        "code": "| ( ( uint(block.blockhash(_lastb+7)) & 0xFFFFFF ) << 168 )"
+    },
+    {
+        "contract_name": "smart_billions.sol",
+        "contract_path": "dataset/bad_randomness/smart_billions.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/bad_randomness/smart_billions.sol",
+        "pragma_version": "0.4.13",
+        "source": "https://etherscan.io/address/0x5ace17f87c7391e5792a7683069a8025b83bbd85#code",
+        "line_number": 716,
+        "vulnerability_category": "bad_randomness",
+        "code": "| ( ( uint(block.blockhash(_lastb+8)) & 0xFFFFFF ) << 192 )"
+    },
+    {
+        "contract_name": "smart_billions.sol",
+        "contract_path": "dataset/bad_randomness/smart_billions.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/bad_randomness/smart_billions.sol",
+        "pragma_version": "0.4.13",
+        "source": "https://etherscan.io/address/0x5ace17f87c7391e5792a7683069a8025b83bbd85#code",
+        "line_number": 718,
+        "vulnerability_category": "bad_randomness",
+        "code": "| ( ( uint(block.blockhash(_lastb+9)) & 0xFFFFFF ) << 216 )"
+    },
+    {
+        "contract_name": "auction.sol",
+        "contract_path": "dataset/denial_of_service/auction.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/denial_of_service/auction.sol",
+        "pragma_version": "0.4.15",
+        "source": "https://github.com/trailofbits/not-so-smart-contracts/blob/master/denial_of_service/auction.sol",
+        "line_number": 23,
+        "vulnerability_category": "denial_of_service",
+        "code": "require(currentFrontrunner.send(currentBid));"
+    },
+    {
+        "contract_name": "dos_address.sol",
+        "contract_path": "dataset/denial_of_service/dos_address.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/denial_of_service/dos_address.sol",
+        "pragma_version": "0.4.25",
+        "source": "https://github.com/SmartContractSecurity/SWC-registry/blob/master/test_cases/dos_gas_limit/dos_address.sol",
+        "line_number": 16,
+        "vulnerability_category": "denial_of_service",
+        "code": "if(creditorAddresses.length>1500) {"
+    },
+    {
+        "contract_name": "dos_address.sol",
+        "contract_path": "dataset/denial_of_service/dos_address.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/denial_of_service/dos_address.sol",
+        "pragma_version": "0.4.25",
+        "source": "https://github.com/SmartContractSecurity/SWC-registry/blob/master/test_cases/dos_gas_limit/dos_address.sol",
+        "line_number": 17,
+        "vulnerability_category": "denial_of_service",
+        "code": "creditorAddresses = new address[](0);"
+    },
+    {
+        "contract_name": "dos_address.sol",
+        "contract_path": "dataset/denial_of_service/dos_address.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/denial_of_service/dos_address.sol",
+        "pragma_version": "0.4.25",
+        "source": "https://github.com/SmartContractSecurity/SWC-registry/blob/master/test_cases/dos_gas_limit/dos_address.sol",
+        "line_number": 18,
+        "vulnerability_category": "denial_of_service",
+        "code": "win = true;"
+    },
+    {
+        "contract_name": "dos_number.sol",
+        "contract_path": "dataset/denial_of_service/dos_number.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/denial_of_service/dos_number.sol",
+        "pragma_version": "0.4.25",
+        "source": "https://github.com/SmartContractSecurity/SWC-registry/blob/master/test_cases/dos_gas_limit/dos_number.sol",
+        "line_number": 18,
+        "vulnerability_category": "denial_of_service",
+        "code": "for(uint i=0;i<numbers;i++) {"
+    },
+    {
+        "contract_name": "dos_number.sol",
+        "contract_path": "dataset/denial_of_service/dos_number.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/denial_of_service/dos_number.sol",
+        "pragma_version": "0.4.25",
+        "source": "https://github.com/SmartContractSecurity/SWC-registry/blob/master/test_cases/dos_gas_limit/dos_number.sol",
+        "line_number": 19,
+        "vulnerability_category": "denial_of_service",
+        "code": "if(numElements == array.length) {"
+    },
+    {
+        "contract_name": "dos_number.sol",
+        "contract_path": "dataset/denial_of_service/dos_number.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/denial_of_service/dos_number.sol",
+        "pragma_version": "0.4.25",
+        "source": "https://github.com/SmartContractSecurity/SWC-registry/blob/master/test_cases/dos_gas_limit/dos_number.sol",
+        "line_number": 20,
+        "vulnerability_category": "denial_of_service",
+        "code": "array.length += 1;"
+    },
+    {
+        "contract_name": "dos_number.sol",
+        "contract_path": "dataset/denial_of_service/dos_number.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/denial_of_service/dos_number.sol",
+        "pragma_version": "0.4.25",
+        "source": "https://github.com/SmartContractSecurity/SWC-registry/blob/master/test_cases/dos_gas_limit/dos_number.sol",
+        "line_number": 21,
+        "vulnerability_category": "denial_of_service",
+        "code": "}"
+    },
+    {
+        "contract_name": "dos_number.sol",
+        "contract_path": "dataset/denial_of_service/dos_number.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/denial_of_service/dos_number.sol",
+        "pragma_version": "0.4.25",
+        "source": "https://github.com/SmartContractSecurity/SWC-registry/blob/master/test_cases/dos_gas_limit/dos_number.sol",
+        "line_number": 22,
+        "vulnerability_category": "denial_of_service",
+        "code": "array[numElements++] = value;"
+    },
+    {
+        "contract_name": "dos_simple.sol",
+        "contract_path": "dataset/denial_of_service/dos_simple.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/denial_of_service/dos_simple.sol",
+        "pragma_version": "0.4.25",
+        "source": "https://github.com/SmartContractSecurity/SWC-registry/blob/master/test_cases/dos_gas_limit/dos_simple.sol",
+        "line_number": 17,
+        "vulnerability_category": "denial_of_service",
+        "code": "for(uint i=0;i<350;i++) {"
+    },
+    {
+        "contract_name": "dos_simple.sol",
+        "contract_path": "dataset/denial_of_service/dos_simple.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/denial_of_service/dos_simple.sol",
+        "pragma_version": "0.4.25",
+        "source": "https://github.com/SmartContractSecurity/SWC-registry/blob/master/test_cases/dos_gas_limit/dos_simple.sol",
+        "line_number": 18,
+        "vulnerability_category": "denial_of_service",
+        "code": "listAddresses.push(msg.sender);"
+    },
+    {
+        "contract_name": "list_dos.sol",
+        "contract_path": "dataset/denial_of_service/list_dos.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/denial_of_service/list_dos.sol",
+        "pragma_version": "0.4.0",
+        "source": "https://etherscan.io/address/0xf45717552f12ef7cb65e95476f217ea008167ae3#code",
+        "line_number": 46,
+        "vulnerability_category": "denial_of_service",
+        "code": "creditorAddresses = new address[](0);"
+    },
+    {
+        "contract_name": "list_dos.sol",
+        "contract_path": "dataset/denial_of_service/list_dos.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/denial_of_service/list_dos.sol",
+        "pragma_version": "0.4.0",
+        "source": "https://etherscan.io/address/0xf45717552f12ef7cb65e95476f217ea008167ae3#code",
+        "line_number": 48,
+        "vulnerability_category": "denial_of_service",
+        "code": "creditorAmounts = new uint[](0);"
+    },
+    {
+        "contract_name": "send_loop.sol",
+        "contract_path": "dataset/denial_of_service/send_loop.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/denial_of_service/send_loop.sol",
+        "pragma_version": "0.4.24",
+        "source": "https://consensys.github.io/smart-contract-best-practices/known_attacks/#dos-with-unexpected-revert",
+        "line_number": 24,
+        "vulnerability_category": "denial_of_service",
+        "code": "require(refundAddresses[x].send(refunds[refundAddresses[x]])); // doubly bad, now a single failure on send will hold up all funds"
+    },
+    {
+        "contract_name": "ERC20.sol",
+        "contract_path": "dataset/front_running/ERC20.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/front_running/ERC20.sol",
+        "pragma_version": "0.4.24",
+        "source": "https://github.com/SmartContractSecurity/SWC-registry/blob/master/test_cases/transaction_order_dependence/ERC20.sol",
+        "line_number": 110,
+        "vulnerability_category": "front_running",
+        "code": "function approve(address spender, uint256 value) public returns (bool) {"
+    },
+    {
+        "contract_name": "ERC20.sol",
+        "contract_path": "dataset/front_running/ERC20.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/front_running/ERC20.sol",
+        "pragma_version": "0.4.24",
+        "source": "https://github.com/SmartContractSecurity/SWC-registry/blob/master/test_cases/transaction_order_dependence/ERC20.sol",
+        "line_number": 113,
+        "vulnerability_category": "front_running",
+        "code": "_allowed[msg.sender][spender] = value;"
+    },
+    {
+        "contract_name": "FindThisHash.sol",
+        "contract_path": "dataset/front_running/FindThisHash.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/front_running/FindThisHash.sol",
+        "pragma_version": "0.4.22",
+        "source": "https://github.com/sigp/solidity-security-blog",
+        "line_number": 17,
+        "vulnerability_category": "front_running",
+        "code": "require(hash == sha3(solution));"
+    },
+    {
+        "contract_name": "eth_tx_order_dependence_minimal.sol",
+        "contract_path": "dataset/front_running/eth_tx_order_dependence_minimal.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/front_running/eth_tx_order_dependence_minimal.sol",
+        "pragma_version": "0.4.16",
+        "source": "https://github.com/ConsenSys/evm-analyzer-benchmark-suite",
+        "line_number": 23,
+        "vulnerability_category": "front_running",
+        "code": "owner.transfer(reward);"
+    },
+    {
+        "contract_name": "eth_tx_order_dependence_minimal.sol",
+        "contract_path": "dataset/front_running/eth_tx_order_dependence_minimal.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/front_running/eth_tx_order_dependence_minimal.sol",
+        "pragma_version": "0.4.16",
+        "source": "https://github.com/ConsenSys/evm-analyzer-benchmark-suite",
+        "line_number": 31,
+        "vulnerability_category": "front_running",
+        "code": "msg.sender.transfer(reward);"
+    },
+    {
+        "contract_name": "odds_and_evens.sol",
+        "contract_path": "dataset/front_running/odds_and_evens.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/front_running/odds_and_evens.sol",
+        "pragma_version": "0.4.2",
+        "source": "http://blockchain.unica.it/projects/ethereum-survey/attacks.html#oddsandevens",
+        "line_number": 25,
+        "vulnerability_category": "front_running",
+        "code": "function play(uint number) payable{"
+    },
+    {
+        "contract_name": "odds_and_evens.sol",
+        "contract_path": "dataset/front_running/odds_and_evens.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/front_running/odds_and_evens.sol",
+        "pragma_version": "0.4.2",
+        "source": "http://blockchain.unica.it/projects/ethereum-survey/attacks.html#oddsandevens",
+        "line_number": 28,
+        "vulnerability_category": "front_running",
+        "code": "players[tot] = Player(msg.sender, number);"
+    },
+    {
+        "contract_name": "crypto_roulette.sol",
+        "contract_path": "dataset/other/crypto_roulette.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/other/crypto_roulette.sol",
+        "pragma_version": "0.4.19",
+        "source": "https://github.com/thec00n/smart-contract-honeypots/blob/master/CryptoRoulette.sol",
+        "line_number": 40,
+        "vulnerability_category": "other",
+        "code": "Game game; //Uninitialized storage pointer"
+    },
+    {
+        "contract_name": "crypto_roulette.sol",
+        "contract_path": "dataset/other/crypto_roulette.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/other/crypto_roulette.sol",
+        "pragma_version": "0.4.19",
+        "source": "https://github.com/thec00n/smart-contract-honeypots/blob/master/CryptoRoulette.sol",
+        "line_number": 41,
+        "vulnerability_category": "other",
+        "code": "game.player = msg.sender;"
+    },
+    {
+        "contract_name": "crypto_roulette.sol",
+        "contract_path": "dataset/other/crypto_roulette.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/other/crypto_roulette.sol",
+        "pragma_version": "0.4.19",
+        "source": "https://github.com/thec00n/smart-contract-honeypots/blob/master/CryptoRoulette.sol",
+        "line_number": 42,
+        "vulnerability_category": "other",
+        "code": "game.number = number;"
+    },
+    {
+        "contract_name": "name_registrar.sol",
+        "contract_path": "dataset/other/name_registrar.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/other/name_registrar.sol",
+        "pragma_version": "0.4.15",
+        "source": "https://github.com/sigp/solidity-security-blog#storage-example",
+        "line_number": 23,
+        "vulnerability_category": "other",
+        "code": "NameRecord newRecord;"
+    },
+    {
+        "contract_name": "open_address_lottery.sol",
+        "contract_path": "dataset/other/open_address_lottery.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/other/open_address_lottery.sol",
+        "pragma_version": "0.4.19",
+        "source": "https://etherscan.io/address/0x741f1923974464efd0aa70e77800ba5d9ed18902#code",
+        "line_number": 91,
+        "vulnerability_category": "other",
+        "code": "SeedComponents s;"
+    },
+    {
+        "contract_name": "0x01f8c4e3fa3edeb29e514cba738d87ce8c091d3f.sol",
+        "contract_path": "dataset/reentrancy/0x01f8c4e3fa3edeb29e514cba738d87ce8c091d3f.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/0x01f8c4e3fa3edeb29e514cba738d87ce8c091d3f.sol",
+        "pragma_version": "0.4.19",
+        "source": "etherscan.io",
+        "line_number": 54,
+        "vulnerability_category": "reentrancy",
+        "code": "if(msg.sender.call.value(_am)())"
+    },
+    {
+        "contract_name": "0x23a91059fdc9579a9fbd0edc5f2ea0bfdb70deb4.sol",
+        "contract_path": "dataset/reentrancy/0x23a91059fdc9579a9fbd0edc5f2ea0bfdb70deb4.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/0x23a91059fdc9579a9fbd0edc5f2ea0bfdb70deb4.sol",
+        "pragma_version": "0.4.19",
+        "source": "etherscan.io",
+        "line_number": 38,
+        "vulnerability_category": "reentrancy",
+        "code": "if(msg.sender.call.value(_am)())"
+    },
+    {
+        "contract_name": "0x4320e6f8c05b27ab4707cd1f6d5ce6f3e4b3a5a1.sol",
+        "contract_path": "dataset/reentrancy/0x4320e6f8c05b27ab4707cd1f6d5ce6f3e4b3a5a1.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/0x4320e6f8c05b27ab4707cd1f6d5ce6f3e4b3a5a1.sol",
+        "pragma_version": "0.4.19",
+        "source": "etherscan.io",
+        "line_number": 55,
+        "vulnerability_category": "reentrancy",
+        "code": "if(msg.sender.call.value(_am)())"
+    },
+    {
+        "contract_name": "0x4e73b32ed6c35f570686b89848e5f39f20ecc106.sol",
+        "contract_path": "dataset/reentrancy/0x4e73b32ed6c35f570686b89848e5f39f20ecc106.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/0x4e73b32ed6c35f570686b89848e5f39f20ecc106.sol",
+        "pragma_version": "0.4.19",
+        "source": "etherscan.io",
+        "line_number": 54,
+        "vulnerability_category": "reentrancy",
+        "code": "if(msg.sender.call.value(_am)())"
+    },
+    {
+        "contract_name": "0x561eac93c92360949ab1f1403323e6db345cbf31.sol",
+        "contract_path": "dataset/reentrancy/0x561eac93c92360949ab1f1403323e6db345cbf31.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/0x561eac93c92360949ab1f1403323e6db345cbf31.sol",
+        "pragma_version": "0.4.19",
+        "source": "etherscan.io",
+        "line_number": 54,
+        "vulnerability_category": "reentrancy",
+        "code": "if(msg.sender.call.value(_am)())"
+    },
+    {
+        "contract_name": "0x627fa62ccbb1c1b04ffaecd72a53e37fc0e17839.sol",
+        "contract_path": "dataset/reentrancy/0x627fa62ccbb1c1b04ffaecd72a53e37fc0e17839.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/0x627fa62ccbb1c1b04ffaecd72a53e37fc0e17839.sol",
+        "pragma_version": "0.4.19",
+        "source": "etherscan.io",
+        "line_number": 94,
+        "vulnerability_category": "reentrancy",
+        "code": "if(_addr.call.value(_wei)())"
+    },
+    {
+        "contract_name": "0x7541b76cb60f4c60af330c208b0623b7f54bf615.sol",
+        "contract_path": "dataset/reentrancy/0x7541b76cb60f4c60af330c208b0623b7f54bf615.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/0x7541b76cb60f4c60af330c208b0623b7f54bf615.sol",
+        "pragma_version": "0.4.25",
+        "source": "etherscan.io",
+        "line_number": 29,
+        "vulnerability_category": "reentrancy",
+        "code": "if(msg.sender.call.value(_am)())"
+    },
+    {
+        "contract_name": "0x7a8721a9d64c74da899424c1b52acbf58ddc9782.sol",
+        "contract_path": "dataset/reentrancy/0x7a8721a9d64c74da899424c1b52acbf58ddc9782.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/0x7a8721a9d64c74da899424c1b52acbf58ddc9782.sol",
+        "pragma_version": "0.4.19",
+        "source": "etherscan.io",
+        "line_number": 52,
+        "vulnerability_category": "reentrancy",
+        "code": "if(msg.sender.call.value(_am)())"
+    },
+    {
+        "contract_name": "0x7b368c4e805c3870b6c49a3f1f49f69af8662cf3.sol",
+        "contract_path": "dataset/reentrancy/0x7b368c4e805c3870b6c49a3f1f49f69af8662cf3.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/0x7b368c4e805c3870b6c49a3f1f49f69af8662cf3.sol",
+        "pragma_version": "0.4.25",
+        "source": "etherscan.io",
+        "line_number": 29,
+        "vulnerability_category": "reentrancy",
+        "code": "if(msg.sender.call.value(_am)())"
+    },
+    {
+        "contract_name": "0x8c7777c45481dba411450c228cb692ac3d550344.sol",
+        "contract_path": "dataset/reentrancy/0x8c7777c45481dba411450c228cb692ac3d550344.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/0x8c7777c45481dba411450c228cb692ac3d550344.sol",
+        "pragma_version": "0.4.19",
+        "source": "etherscan.io",
+        "line_number": 41,
+        "vulnerability_category": "reentrancy",
+        "code": "if(msg.sender.call.value(_am)())"
+    },
+    {
+        "contract_name": "0x93c32845fae42c83a70e5f06214c8433665c2ab5.sol",
+        "contract_path": "dataset/reentrancy/0x93c32845fae42c83a70e5f06214c8433665c2ab5.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/0x93c32845fae42c83a70e5f06214c8433665c2ab5.sol",
+        "pragma_version": "0.4.25",
+        "source": "etherscan.io",
+        "line_number": 29,
+        "vulnerability_category": "reentrancy",
+        "code": "if(msg.sender.call.value(_am)())"
+    },
+    {
+        "contract_name": "0x941d225236464a25eb18076df7da6a91d0f95e9e.sol",
+        "contract_path": "dataset/reentrancy/0x941d225236464a25eb18076df7da6a91d0f95e9e.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/0x941d225236464a25eb18076df7da6a91d0f95e9e.sol",
+        "pragma_version": "0.4.19",
+        "source": "etherscan.io",
+        "line_number": 44,
+        "vulnerability_category": "reentrancy",
+        "code": "if(msg.sender.call.value(_am)())"
+    },
+    {
+        "contract_name": "0x96edbe868531bd23a6c05e9d0c424ea64fb1b78b.sol",
+        "contract_path": "dataset/reentrancy/0x96edbe868531bd23a6c05e9d0c424ea64fb1b78b.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/0x96edbe868531bd23a6c05e9d0c424ea64fb1b78b.sol",
+        "pragma_version": "0.4.19",
+        "source": "etherscan.io",
+        "line_number": 63,
+        "vulnerability_category": "reentrancy",
+        "code": "if(msg.sender.call.value(_am)())"
+    },
+    {
+        "contract_name": "0xaae1f51cf3339f18b6d3f3bdc75a5facd744b0b8.sol",
+        "contract_path": "dataset/reentrancy/0xaae1f51cf3339f18b6d3f3bdc75a5facd744b0b8.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/0xaae1f51cf3339f18b6d3f3bdc75a5facd744b0b8.sol",
+        "pragma_version": "0.4.19",
+        "source": "etherscan.io",
+        "line_number": 54,
+        "vulnerability_category": "reentrancy",
+        "code": "if(msg.sender.call.value(_am)())"
+    },
+    {
+        "contract_name": "0xb5e1b1ee15c6fa0e48fce100125569d430f1bd12.sol",
+        "contract_path": "dataset/reentrancy/0xb5e1b1ee15c6fa0e48fce100125569d430f1bd12.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/0xb5e1b1ee15c6fa0e48fce100125569d430f1bd12.sol",
+        "pragma_version": "0.4.19",
+        "source": "etherscan.io",
+        "line_number": 40,
+        "vulnerability_category": "reentrancy",
+        "code": "if(msg.sender.call.value(_am)())"
+    },
+    {
+        "contract_name": "0xb93430ce38ac4a6bb47fb1fc085ea669353fd89e.sol",
+        "contract_path": "dataset/reentrancy/0xb93430ce38ac4a6bb47fb1fc085ea669353fd89e.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/0xb93430ce38ac4a6bb47fb1fc085ea669353fd89e.sol",
+        "pragma_version": "0.4.19",
+        "source": "etherscan.io",
+        "line_number": 38,
+        "vulnerability_category": "reentrancy",
+        "code": "if(msg.sender.call.value(_am)())"
+    },
+    {
+        "contract_name": "0xbaf51e761510c1a11bf48dd87c0307ac8a8c8a4f.sol",
+        "contract_path": "dataset/reentrancy/0xbaf51e761510c1a11bf48dd87c0307ac8a8c8a4f.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/0xbaf51e761510c1a11bf48dd87c0307ac8a8c8a4f.sol",
+        "pragma_version": "0.4.19",
+        "source": "etherscan.io",
+        "line_number": 41,
+        "vulnerability_category": "reentrancy",
+        "code": "if(msg.sender.call.value(_am)())"
+    },
+    {
+        "contract_name": "0xbe4041d55db380c5ae9d4a9b9703f1ed4e7e3888.sol",
+        "contract_path": "dataset/reentrancy/0xbe4041d55db380c5ae9d4a9b9703f1ed4e7e3888.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/0xbe4041d55db380c5ae9d4a9b9703f1ed4e7e3888.sol",
+        "pragma_version": "0.4.19",
+        "source": "etherscan.io",
+        "line_number": 63,
+        "vulnerability_category": "reentrancy",
+        "code": "if(msg.sender.call.value(_am)())"
+    },
+    {
+        "contract_name": "0xcead721ef5b11f1a7b530171aab69b16c5e66b6e.sol",
+        "contract_path": "dataset/reentrancy/0xcead721ef5b11f1a7b530171aab69b16c5e66b6e.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/0xcead721ef5b11f1a7b530171aab69b16c5e66b6e.sol",
+        "pragma_version": "0.4.25",
+        "source": "etherscan.io",
+        "line_number": 29,
+        "vulnerability_category": "reentrancy",
+        "code": "if(msg.sender.call.value(_am)())"
+    },
+    {
+        "contract_name": "0xf015c35649c82f5467c9c74b7f28ee67665aad68.sol",
+        "contract_path": "dataset/reentrancy/0xf015c35649c82f5467c9c74b7f28ee67665aad68.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/0xf015c35649c82f5467c9c74b7f28ee67665aad68.sol",
+        "pragma_version": "0.4.25",
+        "source": "etherscan.io",
+        "line_number": 29,
+        "vulnerability_category": "reentrancy",
+        "code": "if(msg.sender.call.value(_am)())"
+    },
+    {
+        "contract_name": "etherbank.sol",
+        "contract_path": "dataset/reentrancy/etherbank.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/etherbank.sol",
+        "pragma_version": "0.4.0",
+        "source": "https://github.com/seresistvanandras/EthBench/blob/master/Benchmark/Simple/reentrant.sol",
+        "line_number": 21,
+        "vulnerability_category": "reentrancy",
+        "code": "if (!(msg.sender.call.value(amountToWithdraw)())) { throw; }"
+    },
+    {
+        "contract_name": "etherstore.sol",
+        "contract_path": "dataset/reentrancy/etherstore.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/etherstore.sol",
+        "pragma_version": "0.4.10",
+        "source": "https://github.com/sigp/solidity-security-blog",
+        "line_number": 27,
+        "vulnerability_category": "reentrancy",
+        "code": "require(msg.sender.call.value(_weiToWithdraw)());"
+    },
+    {
+        "contract_name": "modifier_reentrancy.sol",
+        "contract_path": "dataset/reentrancy/modifier_reentrancy.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/modifier_reentrancy.sol",
+        "pragma_version": "0.4.24",
+        "source": "https://github.com/SmartContractSecurity/SWC-registry/blob/master/test_cases/reentracy/modifier_reentrancy.sol",
+        "line_number": 15,
+        "vulnerability_category": "reentrancy",
+        "code": "function airDrop() hasNoBalance supportsToken  public{"
+    },
+    {
+        "contract_name": "reentrance.sol",
+        "contract_path": "dataset/reentrancy/reentrance.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/reentrance.sol",
+        "pragma_version": "0.4.18",
+        "source": "https://ethernaut.zeppelin.solutions/level/0xf70706db003e94cfe4b5e27ffd891d5c81b39488",
+        "line_number": 24,
+        "vulnerability_category": "reentrancy",
+        "code": "if(msg.sender.call.value(_amount)()) {"
+    },
+    {
+        "contract_name": "reentrancy_bonus.sol",
+        "contract_path": "dataset/reentrancy/reentrancy_bonus.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/reentrancy_bonus.sol",
+        "pragma_version": "0.4.24",
+        "source": "https://consensys.github.io/smart-contract-best-practices/known_attacks/",
+        "line_number": 28,
+        "vulnerability_category": "reentrancy",
+        "code": "withdrawReward(recipient); // At this point, the caller will be able to execute getFirstWithdrawalBonus again."
+    },
+    {
+        "contract_name": "reentrancy_cross_function.sol",
+        "contract_path": "dataset/reentrancy/reentrancy_cross_function.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/reentrancy_cross_function.sol",
+        "pragma_version": "0.4.24",
+        "source": "https://consensys.github.io/smart-contract-best-practices/known_attacks/",
+        "line_number": 24,
+        "vulnerability_category": "reentrancy",
+        "code": "(bool success, ) = msg.sender.call.value(amountToWithdraw)(\"\"); // At this point, the caller's code is executed, and can call transfer()"
+    },
+    {
+        "contract_name": "reentrancy_dao.sol",
+        "contract_path": "dataset/reentrancy/reentrancy_dao.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/reentrancy_dao.sol",
+        "pragma_version": "0.4.19",
+        "source": "https://github.com/ConsenSys/evm-analyzer-benchmark-suite",
+        "line_number": 18,
+        "vulnerability_category": "reentrancy",
+        "code": "bool callResult = msg.sender.call.value(oCredit)();"
+    },
+    {
+        "contract_name": "reentrancy_insecure.sol",
+        "contract_path": "dataset/reentrancy/reentrancy_insecure.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/reentrancy_insecure.sol",
+        "pragma_version": "0.5.0",
+        "source": "https://consensys.github.io/smart-contract-best-practices/known_attacks/",
+        "line_number": 17,
+        "vulnerability_category": "reentrancy",
+        "code": "(bool success, ) = msg.sender.call.value(amountToWithdraw)(\"\"); // At this point, the caller's code is executed, and can call withdrawBalance again"
+    },
+    {
+        "contract_name": "reentrancy_simple.sol",
+        "contract_path": "dataset/reentrancy/reentrancy_simple.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/reentrancy_simple.sol",
+        "pragma_version": "0.4.15",
+        "source": "https://github.com/trailofbits/not-so-smart-contracts/blob/master/reentrancy/Reentrancy.sol",
+        "line_number": 24,
+        "vulnerability_category": "reentrancy",
+        "code": "if( ! (msg.sender.call.value(userBalance[msg.sender])() ) ){"
+    },
+    {
+        "contract_name": "simple_dao.sol",
+        "contract_path": "dataset/reentrancy/simple_dao.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/simple_dao.sol",
+        "pragma_version": "0.4.2",
+        "source": "http://blockchain.unica.it/projects/ethereum-survey/attacks.html#simpledao",
+        "line_number": 19,
+        "vulnerability_category": "reentrancy",
+        "code": "bool res = msg.sender.call.value(amount)();"
+    },
+    {
+        "contract_name": "spank_chain_payment.sol",
+        "contract_path": "dataset/reentrancy/spank_chain_payment.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/spank_chain_payment.sol",
+        "pragma_version": "0.4.23",
+        "source": "https://github.com/trailofbits/not-so-smart-contracts/blob/master/reentrancy/SpankChain_source_code/SpankChain_Payment.sol",
+        "line_number": 426,
+        "vulnerability_category": "reentrancy",
+        "code": "Channels[_lcID].partyAddresses[0].transfer(Channels[_lcID].ethBalances[0]);"
+    },
+    {
+        "contract_name": "spank_chain_payment.sol",
+        "contract_path": "dataset/reentrancy/spank_chain_payment.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/spank_chain_payment.sol",
+        "pragma_version": "0.4.23",
+        "source": "https://github.com/trailofbits/not-so-smart-contracts/blob/master/reentrancy/SpankChain_source_code/SpankChain_Payment.sol",
+        "line_number": 430,
+        "vulnerability_category": "reentrancy",
+        "code": "require(Channels[_lcID].token.transfer(Channels[_lcID].partyAddresses[0], Channels[_lcID].erc20Balances[0]),\"CreateChannel: token transfer failure\");"
+    },
+    {
+        "contract_name": "short_address_example.sol",
+        "contract_path": "dataset/short_addresses/short_address_example.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/short_addresses/short_address_example.sol",
+        "pragma_version": "0.4.11",
+        "source": "https://ericrafaloff.com/analyzing-the-erc20-short-address-attack/",
+        "line_number": 18,
+        "vulnerability_category": "short_addresses",
+        "code": "function sendCoin(address to, uint amount) returns(bool sufficient) {"
+    },
+    {
+        "contract_name": "ether_lotto.sol",
+        "contract_path": "dataset/time_manipulation/ether_lotto.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/time_manipulation/ether_lotto.sol",
+        "pragma_version": "0.4.15",
+        "source": "https://etherscan.io/address/0xa11e4ed59dc94e69612f3111942626ed513cb172#code",
+        "line_number": 43,
+        "vulnerability_category": "time_manipulation",
+        "code": "var random = uint(sha3(block.timestamp)) % 2;"
+    },
+    {
+        "contract_name": "governmental_survey.sol",
+        "contract_path": "dataset/time_manipulation/governmental_survey.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/time_manipulation/governmental_survey.sol",
+        "pragma_version": "0.4.0",
+        "source": "http://blockchain.unica.it/projects/ethereum-survey/attacks.html#governmental",
+        "line_number": 27,
+        "vulnerability_category": "time_manipulation",
+        "code": "lastInvestmentTimestamp = block.timestamp;"
+    },
+    {
+        "contract_name": "lottopollo.sol",
+        "contract_path": "dataset/time_manipulation/lottopollo.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/time_manipulation/lottopollo.sol",
+        "pragma_version": "0.4.0",
+        "source": "https://github.com/seresistvanandras/EthBench/blob/master/Benchmark/Simple/timestampdependent.sol",
+        "line_number": 13,
+        "vulnerability_category": "time_manipulation",
+        "code": "if ( rand> 0 && now - rand > 24 hours ) {"
+    },
+    {
+        "contract_name": "lottopollo.sol",
+        "contract_path": "dataset/time_manipulation/lottopollo.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/time_manipulation/lottopollo.sol",
+        "pragma_version": "0.4.0",
+        "source": "https://github.com/seresistvanandras/EthBench/blob/master/Benchmark/Simple/timestampdependent.sol",
+        "line_number": 27,
+        "vulnerability_category": "time_manipulation",
+        "code": "return block.timestamp;"
+    },
+    {
+        "contract_name": "roulette.sol",
+        "contract_path": "dataset/time_manipulation/roulette.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/time_manipulation/roulette.sol",
+        "pragma_version": "0.4.25",
+        "source": "https://github.com/sigp/solidity-security-blog",
+        "line_number": 18,
+        "vulnerability_category": "time_manipulation",
+        "code": "require(now != pastBlockTime); // only 1 transaction per block"
+    },
+    {
+        "contract_name": "roulette.sol",
+        "contract_path": "dataset/time_manipulation/roulette.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/time_manipulation/roulette.sol",
+        "pragma_version": "0.4.25",
+        "source": "https://github.com/sigp/solidity-security-blog",
+        "line_number": 20,
+        "vulnerability_category": "time_manipulation",
+        "code": "pastBlockTime = now;"
+    },
+    {
+        "contract_name": "timed_crowdsale.sol",
+        "contract_path": "dataset/time_manipulation/timed_crowdsale.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/time_manipulation/timed_crowdsale.sol",
+        "pragma_version": "0.4.25",
+        "source": "https://github.com/SmartContractSecurity/SWC-registry/blob/master/test_cases/timestamp_dependence/timed_crowdsale.sol",
+        "line_number": 13,
+        "vulnerability_category": "time_manipulation",
+        "code": "return block.timestamp >= 1546300800;"
+    },
+    {
+        "contract_name": "0x07f7ecb66d788ab01dc93b9b71a88401de7d0f2e.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/0x07f7ecb66d788ab01dc93b9b71a88401de7d0f2e.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x07f7ecb66d788ab01dc93b9b71a88401de7d0f2e.sol",
+        "pragma_version": "0.4.24",
+        "source": "etherscan.io",
+        "line_number": 201,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "whale.call.value(amount)(bytes4(keccak256(\"donate()\")));"
+    },
+    {
+        "contract_name": "0x07f7ecb66d788ab01dc93b9b71a88401de7d0f2e.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/0x07f7ecb66d788ab01dc93b9b71a88401de7d0f2e.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x07f7ecb66d788ab01dc93b9b71a88401de7d0f2e.sol",
+        "pragma_version": "0.4.24",
+        "source": "etherscan.io",
+        "line_number": 213,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "whale.call.value(amount)(bytes4(keccak256(\"donate()\")));"
+    },
+    {
+        "contract_name": "0x0cbe050f75bc8f8c2d6c0d249fea125fd6e1acc9.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/0x0cbe050f75bc8f8c2d6c0d249fea125fd6e1acc9.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x0cbe050f75bc8f8c2d6c0d249fea125fd6e1acc9.sol",
+        "pragma_version": "0.4.10",
+        "source": "etherscan.io",
+        "line_number": 12,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "a.call();"
+    },
+    {
+        "contract_name": "0x19cf8481ea15427a98ba3cdd6d9e14690011ab10.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/0x19cf8481ea15427a98ba3cdd6d9e14690011ab10.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x19cf8481ea15427a98ba3cdd6d9e14690011ab10.sol",
+        "pragma_version": "0.4.11",
+        "source": "etherscan.io",
+        "line_number": 439,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "owner.send(this.balance - SubX);"
+    },
+    {
+        "contract_name": "0x19cf8481ea15427a98ba3cdd6d9e14690011ab10.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/0x19cf8481ea15427a98ba3cdd6d9e14690011ab10.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x19cf8481ea15427a98ba3cdd6d9e14690011ab10.sol",
+        "pragma_version": "0.4.11",
+        "source": "etherscan.io",
+        "line_number": 465,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "owner.send(this.balance);"
+    },
+    {
+        "contract_name": "0x2972d548497286d18e92b5fa1f8f9139e5653fd2.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/0x2972d548497286d18e92b5fa1f8f9139e5653fd2.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x2972d548497286d18e92b5fa1f8f9139e5653fd2.sol",
+        "pragma_version": "0.4.25",
+        "source": "etherscan.io",
+        "line_number": 14,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "caddress.call(id,from,_tos[i],v[i]);"
+    },
+    {
+        "contract_name": "0x39cfd754c85023648bf003bea2dd498c5612abfa.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/0x39cfd754c85023648bf003bea2dd498c5612abfa.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x39cfd754c85023648bf003bea2dd498c5612abfa.sol",
+        "pragma_version": "0.4.18",
+        "source": "etherscan.io",
+        "line_number": 44,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "token.call(bytes4(sha3(\"transfer(address,uint256)\")),to,amount);"
+    },
+    {
+        "contract_name": "0x39cfd754c85023648bf003bea2dd498c5612abfa.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/0x39cfd754c85023648bf003bea2dd498c5612abfa.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x39cfd754c85023648bf003bea2dd498c5612abfa.sol",
+        "pragma_version": "0.4.18",
+        "source": "etherscan.io",
+        "line_number": 97,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "_addr.call.value(_wei);"
+    },
+    {
+        "contract_name": "0x3a0e9acd953ffc0dd18d63603488846a6b8b2b01.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/0x3a0e9acd953ffc0dd18d63603488846a6b8b2b01.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x3a0e9acd953ffc0dd18d63603488846a6b8b2b01.sol",
+        "pragma_version": "0.4.18",
+        "source": "etherscan.io",
+        "line_number": 44,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "token.call(bytes4(sha3(\"transfer(address,uint256)\")),to,amount);"
+    },
+    {
+        "contract_name": "0x3a0e9acd953ffc0dd18d63603488846a6b8b2b01.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/0x3a0e9acd953ffc0dd18d63603488846a6b8b2b01.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x3a0e9acd953ffc0dd18d63603488846a6b8b2b01.sol",
+        "pragma_version": "0.4.18",
+        "source": "etherscan.io",
+        "line_number": 97,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "_addr.call.value(_wei);"
+    },
+    {
+        "contract_name": "0x3e013fc32a54c4c5b6991ba539dcd0ec4355c859.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/0x3e013fc32a54c4c5b6991ba539dcd0ec4355c859.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x3e013fc32a54c4c5b6991ba539dcd0ec4355c859.sol",
+        "pragma_version": "0.4.18",
+        "source": "etherscan.io",
+        "line_number": 29,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "adr.call.value(msg.value)(data);"
+    },
+    {
+        "contract_name": "0x3f2ef511aa6e75231e4deafc7a3d2ecab3741de2.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/0x3f2ef511aa6e75231e4deafc7a3d2ecab3741de2.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x3f2ef511aa6e75231e4deafc7a3d2ecab3741de2.sol",
+        "pragma_version": "0.4.19",
+        "source": "etherscan.io",
+        "line_number": 45,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "adr.call.value(msg.value)(data);"
+    },
+    {
+        "contract_name": "0x4051334adc52057aca763453820cb0e045076ef3.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/0x4051334adc52057aca763453820cb0e045076ef3.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x4051334adc52057aca763453820cb0e045076ef3.sol",
+        "pragma_version": "0.4.24",
+        "source": "etherscan.io",
+        "line_number": 16,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "caddress.call(id,from,_tos[i],v);"
+    },
+    {
+        "contract_name": "0x4a66ad0bca2d700f11e1f2fc2c106f7d3264504c.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/0x4a66ad0bca2d700f11e1f2fc2c106f7d3264504c.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x4a66ad0bca2d700f11e1f2fc2c106f7d3264504c.sol",
+        "pragma_version": "0.4.18",
+        "source": "etherscan.io",
+        "line_number": 19,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "caddress.call(id,from,_tos[i],v[i]*1000000000000000000);"
+    },
+    {
+        "contract_name": "0x4b71ad9c1a84b9b643aa54fdd66e2dec96e8b152.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/0x4b71ad9c1a84b9b643aa54fdd66e2dec96e8b152.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x4b71ad9c1a84b9b643aa54fdd66e2dec96e8b152.sol",
+        "pragma_version": "0.4.24",
+        "source": "etherscan.io",
+        "line_number": 17,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "caddress.call(id,from,_tos[i],v);"
+    },
+    {
+        "contract_name": "0x524960d55174d912768678d8c606b4d50b79d7b1.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/0x524960d55174d912768678d8c606b4d50b79d7b1.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x524960d55174d912768678d8c606b4d50b79d7b1.sol",
+        "pragma_version": "0.4.13",
+        "source": "etherscan.io",
+        "line_number": 21,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "contract_address.call(\"register\", \"CentraToken\");"
+    },
+    {
+        "contract_name": "0x52d2e0f9b01101a59b38a3d05c80b7618aeed984.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/0x52d2e0f9b01101a59b38a3d05c80b7618aeed984.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x52d2e0f9b01101a59b38a3d05c80b7618aeed984.sol",
+        "pragma_version": "0.4.19",
+        "source": "etherscan.io",
+        "line_number": 27,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "addr.call.value(0 wei)();"
+    },
+    {
+        "contract_name": "0x5aa88d2901c68fda244f1d0584400368d2c8e739.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/0x5aa88d2901c68fda244f1d0584400368d2c8e739.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x5aa88d2901c68fda244f1d0584400368d2c8e739.sol",
+        "pragma_version": "0.4.18",
+        "source": "etherscan.io",
+        "line_number": 29,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "adr.call.value(msg.value)(data);"
+    },
+    {
+        "contract_name": "0x610495793564aed0f9c7fc48dc4c7c9151d34fd6.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/0x610495793564aed0f9c7fc48dc4c7c9151d34fd6.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x610495793564aed0f9c7fc48dc4c7c9151d34fd6.sol",
+        "pragma_version": "0.4.24",
+        "source": "etherscan.io",
+        "line_number": 33,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "_target.call.value(_value)(_data);"
+    },
+    {
+        "contract_name": "0x627fa62ccbb1c1b04ffaecd72a53e37fc0e17839.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/0x627fa62ccbb1c1b04ffaecd72a53e37fc0e17839.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x627fa62ccbb1c1b04ffaecd72a53e37fc0e17839.sol",
+        "pragma_version": "0.4.19",
+        "source": "etherscan.io",
+        "line_number": 44,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "token.call(bytes4(sha3(\"transfer(address,uint256)\")),to,amount);"
+    },
+    {
+        "contract_name": "0x663e4229142a27f00bafb5d087e1e730648314c3.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol",
+        "pragma_version": "0.4.24",
+        "source": "etherscan.io",
+        "line_number": 1152,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "msg.sender.send(autoBirthFee);"
+    },
+    {
+        "contract_name": "0x663e4229142a27f00bafb5d087e1e730648314c3.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol",
+        "pragma_version": "0.4.24",
+        "source": "etherscan.io",
+        "line_number": 1496,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "bool res = nftAddress.send(this.balance);"
+    },
+    {
+        "contract_name": "0x663e4229142a27f00bafb5d087e1e730648314c3.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol",
+        "pragma_version": "0.4.24",
+        "source": "etherscan.io",
+        "line_number": 2467,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "cfoAddress.send(balance - subtractFees);"
+    },
+    {
+        "contract_name": "0x70f9eddb3931491aab1aeafbc1e7f1ca2a012db4.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/0x70f9eddb3931491aab1aeafbc1e7f1ca2a012db4.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x70f9eddb3931491aab1aeafbc1e7f1ca2a012db4.sol",
+        "pragma_version": "0.4.19",
+        "source": "etherscan.io",
+        "line_number": 29,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "adr.call.value(msg.value)(data);"
+    },
+    {
+        "contract_name": "0x78c2a1e91b52bca4130b6ed9edd9fbcfd4671c37.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/0x78c2a1e91b52bca4130b6ed9edd9fbcfd4671c37.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x78c2a1e91b52bca4130b6ed9edd9fbcfd4671c37.sol",
+        "pragma_version": "0.4.19",
+        "source": "etherscan.io",
+        "line_number": 45,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "adr.call.value(msg.value)(data);"
+    },
+    {
+        "contract_name": "0x7a4349a749e59a5736efb7826ee3496a2dfd5489.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/0x7a4349a749e59a5736efb7826ee3496a2dfd5489.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x7a4349a749e59a5736efb7826ee3496a2dfd5489.sol",
+        "pragma_version": "0.4.19",
+        "source": "etherscan.io",
+        "line_number": 44,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "adr.call.value(msg.value)(data);"
+    },
+    {
+        "contract_name": "0x7d09edb07d23acb532a82be3da5c17d9d85806b4.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/0x7d09edb07d23acb532a82be3da5c17d9d85806b4.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x7d09edb07d23acb532a82be3da5c17d9d85806b4.sol",
+        "pragma_version": "0.4.24",
+        "source": "etherscan.io",
+        "line_number": 198,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "whale.call.value(amount)(bytes4(keccak256(\"donate()\")));"
+    },
+    {
+        "contract_name": "0x7d09edb07d23acb532a82be3da5c17d9d85806b4.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/0x7d09edb07d23acb532a82be3da5c17d9d85806b4.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x7d09edb07d23acb532a82be3da5c17d9d85806b4.sol",
+        "pragma_version": "0.4.24",
+        "source": "etherscan.io",
+        "line_number": 210,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "whale.call.value(amount)(bytes4(keccak256(\"donate()\")));"
+    },
+    {
+        "contract_name": "0x806a6bd219f162442d992bdc4ee6eba1f2c5a707.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/0x806a6bd219f162442d992bdc4ee6eba1f2c5a707.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x806a6bd219f162442d992bdc4ee6eba1f2c5a707.sol",
+        "pragma_version": "0.4.19",
+        "source": "etherscan.io",
+        "line_number": 44,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "adr.call.value(msg.value)(data);"
+    },
+    {
+        "contract_name": "0x84d9ec85c9c568eb332b7226a8f826d897e0a4a8.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/0x84d9ec85c9c568eb332b7226a8f826d897e0a4a8.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x84d9ec85c9c568eb332b7226a8f826d897e0a4a8.sol",
+        "pragma_version": "0.4.16",
+        "source": "etherscan.io",
+        "line_number": 56,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "_dst.call.value(_value)(_data);"
+    },
+    {
+        "contract_name": "0x89c1b3807d4c67df034fffb62f3509561218d30b.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/0x89c1b3807d4c67df034fffb62f3509561218d30b.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x89c1b3807d4c67df034fffb62f3509561218d30b.sol",
+        "pragma_version": "0.4.9",
+        "source": "etherscan.io",
+        "line_number": 162,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "SGX_ADDRESS.send(CANCELLATION_FEE);"
+    },
+    {
+        "contract_name": "0x89c1b3807d4c67df034fffb62f3509561218d30b.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/0x89c1b3807d4c67df034fffb62f3509561218d30b.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x89c1b3807d4c67df034fffb62f3509561218d30b.sol",
+        "pragma_version": "0.4.9",
+        "source": "etherscan.io",
+        "line_number": 175,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "SGX_ADDRESS.send(fee);"
+    },
+    {
+        "contract_name": "0x89c1b3807d4c67df034fffb62f3509561218d30b.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/0x89c1b3807d4c67df034fffb62f3509561218d30b.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x89c1b3807d4c67df034fffb62f3509561218d30b.sol",
+        "pragma_version": "0.4.9",
+        "source": "etherscan.io",
+        "line_number": 180,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "requests[requestId].requester.call.gas(2300).value(fee)();"
+    },
+    {
+        "contract_name": "0x89c1b3807d4c67df034fffb62f3509561218d30b.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/0x89c1b3807d4c67df034fffb62f3509561218d30b.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x89c1b3807d4c67df034fffb62f3509561218d30b.sol",
+        "pragma_version": "0.4.9",
+        "source": "etherscan.io",
+        "line_number": 192,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "requests[requestId].callbackAddr.call.gas(callbackGas)(requests[requestId].callbackFID, requestId, error, respData); // call the callback function in the application contract"
+    },
+    {
+        "contract_name": "0x8fd1e427396ddb511533cf9abdbebd0a7e08da35.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/0x8fd1e427396ddb511533cf9abdbebd0a7e08da35.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x8fd1e427396ddb511533cf9abdbebd0a7e08da35.sol",
+        "pragma_version": "0.4.18",
+        "source": "etherscan.io",
+        "line_number": 44,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "token.call(bytes4(sha3(\"transfer(address,uint256)\")),to,amount);"
+    },
+    {
+        "contract_name": "0x8fd1e427396ddb511533cf9abdbebd0a7e08da35.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/0x8fd1e427396ddb511533cf9abdbebd0a7e08da35.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x8fd1e427396ddb511533cf9abdbebd0a7e08da35.sol",
+        "pragma_version": "0.4.18",
+        "source": "etherscan.io",
+        "line_number": 97,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "_addr.call.value(_wei);"
+    },
+    {
+        "contract_name": "0x958a8f594101d2c0485a52319f29b2647f2ebc06.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/0x958a8f594101d2c0485a52319f29b2647f2ebc06.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x958a8f594101d2c0485a52319f29b2647f2ebc06.sol",
+        "pragma_version": "0.4.16",
+        "source": "etherscan.io",
+        "line_number": 55,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "_dst.call.value(_value)(_data);"
+    },
+    {
+        "contract_name": "0x9d06cbafa865037a01d322d3f4222fa3e04e5488.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/0x9d06cbafa865037a01d322d3f4222fa3e04e5488.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x9d06cbafa865037a01d322d3f4222fa3e04e5488.sol",
+        "pragma_version": "0.4.23",
+        "source": "etherscan.io",
+        "line_number": 54,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "owner2.send(sum2);"
+    },
+    {
+        "contract_name": "0x9d06cbafa865037a01d322d3f4222fa3e04e5488.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/0x9d06cbafa865037a01d322d3f4222fa3e04e5488.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x9d06cbafa865037a01d322d3f4222fa3e04e5488.sol",
+        "pragma_version": "0.4.23",
+        "source": "etherscan.io",
+        "line_number": 65,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "owner.send(balance);"
+    },
+    {
+        "contract_name": "0xa1fceeff3acc57d257b917e30c4df661401d6431.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/0xa1fceeff3acc57d257b917e30c4df661401d6431.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0xa1fceeff3acc57d257b917e30c4df661401d6431.sol",
+        "pragma_version": "0.4.18",
+        "source": "etherscan.io",
+        "line_number": 31,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "contract_address.call(id, msg.sender, tos[i], vs[i]);"
+    },
+    {
+        "contract_name": "0xa46edd6a9a93feec36576ee5048146870ea2c3ae.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/0xa46edd6a9a93feec36576ee5048146870ea2c3ae.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0xa46edd6a9a93feec36576ee5048146870ea2c3ae.sol",
+        "pragma_version": "0.4.18",
+        "source": "etherscan.io",
+        "line_number": 16,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "caddress.call(id,from,_tos[i],v[i]);"
+    },
+    {
+        "contract_name": "0xb0510d68f210b7db66e8c7c814f22680f2b8d1d6.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/0xb0510d68f210b7db66e8c7c814f22680f2b8d1d6.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0xb0510d68f210b7db66e8c7c814f22680f2b8d1d6.sol",
+        "pragma_version": "0.4.23",
+        "source": "etherscan.io",
+        "line_number": 69,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "extra[0].call.value(_share).gas(800000)();"
+    },
+    {
+        "contract_name": "0xb0510d68f210b7db66e8c7c814f22680f2b8d1d6.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/0xb0510d68f210b7db66e8c7c814f22680f2b8d1d6.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0xb0510d68f210b7db66e8c7c814f22680f2b8d1d6.sol",
+        "pragma_version": "0.4.23",
+        "source": "etherscan.io",
+        "line_number": 71,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "extra[1].call.value(_share).gas(800000)();"
+    },
+    {
+        "contract_name": "0xb0510d68f210b7db66e8c7c814f22680f2b8d1d6.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/0xb0510d68f210b7db66e8c7c814f22680f2b8d1d6.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0xb0510d68f210b7db66e8c7c814f22680f2b8d1d6.sol",
+        "pragma_version": "0.4.23",
+        "source": "etherscan.io",
+        "line_number": 73,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "extra[2].call.value(_share).gas(800000)();"
+    },
+    {
+        "contract_name": "0xb0510d68f210b7db66e8c7c814f22680f2b8d1d6.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/0xb0510d68f210b7db66e8c7c814f22680f2b8d1d6.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0xb0510d68f210b7db66e8c7c814f22680f2b8d1d6.sol",
+        "pragma_version": "0.4.23",
+        "source": "etherscan.io",
+        "line_number": 75,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "extra[3].call.value(_share).gas(800000)();"
+    },
+    {
+        "contract_name": "0xb0510d68f210b7db66e8c7c814f22680f2b8d1d6.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/0xb0510d68f210b7db66e8c7c814f22680f2b8d1d6.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0xb0510d68f210b7db66e8c7c814f22680f2b8d1d6.sol",
+        "pragma_version": "0.4.23",
+        "source": "etherscan.io",
+        "line_number": 102,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "target[0].call.value(msg.value).gas(600000)();"
+    },
+    {
+        "contract_name": "0xb11b2fed6c9354f7aa2f658d3b4d7b31d8a13b77.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/0xb11b2fed6c9354f7aa2f658d3b4d7b31d8a13b77.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0xb11b2fed6c9354f7aa2f658d3b4d7b31d8a13b77.sol",
+        "pragma_version": "0.4.24",
+        "source": "etherscan.io",
+        "line_number": 14,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "target.call.value(msg.value)(data);"
+    },
+    {
+        "contract_name": "0xb37f18af15bafb869a065b61fc83cfc44ed9cc27.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/0xb37f18af15bafb869a065b61fc83cfc44ed9cc27.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0xb37f18af15bafb869a065b61fc83cfc44ed9cc27.sol",
+        "pragma_version": "0.4.24",
+        "source": "etherscan.io",
+        "line_number": 33,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "_target.call.value(_value)();"
+    },
+    {
+        "contract_name": "0xb620cee6b52f96f3c6b253e6eea556aa2d214a99.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/0xb620cee6b52f96f3c6b253e6eea556aa2d214a99.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0xb620cee6b52f96f3c6b253e6eea556aa2d214a99.sol",
+        "pragma_version": "0.4.23",
+        "source": "etherscan.io",
+        "line_number": 100,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "firstTarget.call.value(msg.value)();"
+    },
+    {
+        "contract_name": "0xb620cee6b52f96f3c6b253e6eea556aa2d214a99.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/0xb620cee6b52f96f3c6b253e6eea556aa2d214a99.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0xb620cee6b52f96f3c6b253e6eea556aa2d214a99.sol",
+        "pragma_version": "0.4.23",
+        "source": "etherscan.io",
+        "line_number": 106,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "secondTarget.call.value(msg.value)();"
+    },
+    {
+        "contract_name": "0xb620cee6b52f96f3c6b253e6eea556aa2d214a99.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/0xb620cee6b52f96f3c6b253e6eea556aa2d214a99.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0xb620cee6b52f96f3c6b253e6eea556aa2d214a99.sol",
+        "pragma_version": "0.4.23",
+        "source": "etherscan.io",
+        "line_number": 133,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "owner.call.value(1 wei)();"
+    },
+    {
+        "contract_name": "0xb7c5c5aa4d42967efe906e1b66cb8df9cebf04f7.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/0xb7c5c5aa4d42967efe906e1b66cb8df9cebf04f7.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0xb7c5c5aa4d42967efe906e1b66cb8df9cebf04f7.sol",
+        "pragma_version": "0.4.23",
+        "source": "etherscan.io",
+        "line_number": 25,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "msg.sender.call.value(balances[msg.sender])();"
+    },
+    {
+        "contract_name": "0xbaa3de6504690efb064420d89e871c27065cdd52.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/0xbaa3de6504690efb064420d89e871c27065cdd52.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0xbaa3de6504690efb064420d89e871c27065cdd52.sol",
+        "pragma_version": "0.4.23",
+        "source": "etherscan.io",
+        "line_number": 14,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "target.call.value(msg.value)(data);"
+    },
+    {
+        "contract_name": "0xbebbfe5b549f5db6e6c78ca97cac19d1fb03082c.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/0xbebbfe5b549f5db6e6c78ca97cac19d1fb03082c.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0xbebbfe5b549f5db6e6c78ca97cac19d1fb03082c.sol",
+        "pragma_version": "0.4.24",
+        "source": "etherscan.io",
+        "line_number": 14,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "target.call.value(msg.value)(data);"
+    },
+    {
+        "contract_name": "0xd2018bfaa266a9ec0a1a84b061640faa009def76.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/0xd2018bfaa266a9ec0a1a84b061640faa009def76.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0xd2018bfaa266a9ec0a1a84b061640faa009def76.sol",
+        "pragma_version": "0.4.19",
+        "source": "etherscan.io",
+        "line_number": 44,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "adr.call.value(msg.value)(data);"
+    },
+    {
+        "contract_name": "0xd5967fed03e85d1cce44cab284695b41bc675b5c.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/0xd5967fed03e85d1cce44cab284695b41bc675b5c.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0xd5967fed03e85d1cce44cab284695b41bc675b5c.sol",
+        "pragma_version": "0.4.24",
+        "source": "etherscan.io",
+        "line_number": 16,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "caddress.call(id,from,_tos[i],v);"
+    },
+    {
+        "contract_name": "0xdb1c55f6926e7d847ddf8678905ad871a68199d2.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/0xdb1c55f6926e7d847ddf8678905ad871a68199d2.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0xdb1c55f6926e7d847ddf8678905ad871a68199d2.sol",
+        "pragma_version": "0.4.19",
+        "source": "etherscan.io",
+        "line_number": 39,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "adr.call.value(msg.value)(data);"
+    },
+    {
+        "contract_name": "0xe09b1ab8111c2729a76f16de96bc86a7af837928.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/0xe09b1ab8111c2729a76f16de96bc86a7af837928.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0xe09b1ab8111c2729a76f16de96bc86a7af837928.sol",
+        "pragma_version": "0.4.24",
+        "source": "etherscan.io",
+        "line_number": 150,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "whale.call.value(donate_amount)(bytes4(keccak256(\"donate()\")));"
+    },
+    {
+        "contract_name": "0xe4eabdca81e31d9acbc4af76b30f532b6ed7f3bf.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/0xe4eabdca81e31d9acbc4af76b30f532b6ed7f3bf.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0xe4eabdca81e31d9acbc4af76b30f532b6ed7f3bf.sol",
+        "pragma_version": "0.4.19",
+        "source": "etherscan.io",
+        "line_number": 44,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "adr.call.value(msg.value)(data);"
+    },
+    {
+        "contract_name": "0xe82f0742a71a02b9e9ffc142fdcb6eb1ed06fb87.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/0xe82f0742a71a02b9e9ffc142fdcb6eb1ed06fb87.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0xe82f0742a71a02b9e9ffc142fdcb6eb1ed06fb87.sol",
+        "pragma_version": "0.4.19",
+        "source": "etherscan.io",
+        "line_number": 39,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "adr.call.value(msg.value)(data);"
+    },
+    {
+        "contract_name": "0xe894d54dca59cb53fe9cbc5155093605c7068220.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/0xe894d54dca59cb53fe9cbc5155093605c7068220.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0xe894d54dca59cb53fe9cbc5155093605c7068220.sol",
+        "pragma_version": "0.4.24",
+        "source": "etherscan.io",
+        "line_number": 17,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "caddress.call(id,from,_tos[i],_value);"
+    },
+    {
+        "contract_name": "0xec329ffc97d75fe03428ae155fc7793431487f63.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/0xec329ffc97d75fe03428ae155fc7793431487f63.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0xec329ffc97d75fe03428ae155fc7793431487f63.sol",
+        "pragma_version": "0.4.11",
+        "source": "etherscan.io",
+        "line_number": 30,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "_dst.call.value(_value)(_data);"
+    },
+    {
+        "contract_name": "0xf2570186500a46986f3139f65afedc2afe4f445d.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/0xf2570186500a46986f3139f65afedc2afe4f445d.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0xf2570186500a46986f3139f65afedc2afe4f445d.sol",
+        "pragma_version": "0.4.16",
+        "source": "etherscan.io",
+        "line_number": 18,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "fuck.call(bytes4(sha3(\"giveBlockReward()\")));"
+    },
+    {
+        "contract_name": "0xf29ebe930a539a60279ace72c707cba851a57707.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/0xf29ebe930a539a60279ace72c707cba851a57707.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0xf29ebe930a539a60279ace72c707cba851a57707.sol",
+        "pragma_version": "0.4.24",
+        "source": "etherscan.io",
+        "line_number": 16,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "target.call.value(msg.value)();"
+    },
+    {
+        "contract_name": "0xf70d589d76eebdd7c12cc5eec99f8f6fa4233b9e.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/0xf70d589d76eebdd7c12cc5eec99f8f6fa4233b9e.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0xf70d589d76eebdd7c12cc5eec99f8f6fa4233b9e.sol",
+        "pragma_version": "0.4.19",
+        "source": "etherscan.io",
+        "line_number": 44,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "adr.call.value(msg.value)(data);"
+    },
+    {
+        "contract_name": "etherpot_lotto.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/etherpot_lotto.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/etherpot_lotto.sol",
+        "pragma_version": "0.4.0",
+        "source": "https://github.com/etherpot/contract/blob/master/app/contracts/lotto.sol",
+        "line_number": 109,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "winner.send(subpot);"
+    },
+    {
+        "contract_name": "etherpot_lotto.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/etherpot_lotto.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/etherpot_lotto.sol",
+        "pragma_version": "0.4.0",
+        "source": "https://github.com/etherpot/contract/blob/master/app/contracts/lotto.sol",
+        "line_number": 141,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "msg.sender.send(msg.value-value);"
+    },
+    {
+        "contract_name": "king_of_the_ether_throne.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/king_of_the_ether_throne.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/king_of_the_ether_throne.sol",
+        "pragma_version": "0.4.0",
+        "source": "https://github.com/kieranelby/KingOfTheEtherThrone/blob/v0.4.0/contracts/KingOfTheEtherThrone.sol",
+        "line_number": 110,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "msg.sender.send(valuePaid);"
+    },
+    {
+        "contract_name": "king_of_the_ether_throne.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/king_of_the_ether_throne.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/king_of_the_ether_throne.sol",
+        "pragma_version": "0.4.0",
+        "source": "https://github.com/kieranelby/KingOfTheEtherThrone/blob/v0.4.0/contracts/KingOfTheEtherThrone.sol",
+        "line_number": 118,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "msg.sender.send(excessPaid);"
+    },
+    {
+        "contract_name": "king_of_the_ether_throne.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/king_of_the_ether_throne.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/king_of_the_ether_throne.sol",
+        "pragma_version": "0.4.0",
+        "source": "https://github.com/kieranelby/KingOfTheEtherThrone/blob/v0.4.0/contracts/KingOfTheEtherThrone.sol",
+        "line_number": 132,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "currentMonarch.etherAddress.send(compensation);"
+    },
+    {
+        "contract_name": "king_of_the_ether_throne.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/king_of_the_ether_throne.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/king_of_the_ether_throne.sol",
+        "pragma_version": "0.4.0",
+        "source": "https://github.com/kieranelby/KingOfTheEtherThrone/blob/v0.4.0/contracts/KingOfTheEtherThrone.sol",
+        "line_number": 174,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "wizardAddress.send(amount);"
+    },
+    {
+        "contract_name": "lotto.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/lotto.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/lotto.sol",
+        "pragma_version": "0.4.18",
+        "source": "https://github.com/sigp/solidity-security-blog",
+        "line_number": 20,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "winner.send(winAmount);"
+    },
+    {
+        "contract_name": "lotto.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/lotto.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/lotto.sol",
+        "pragma_version": "0.4.18",
+        "source": "https://github.com/sigp/solidity-security-blog",
+        "line_number": 27,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "msg.sender.send(this.balance);"
+    },
+    {
+        "contract_name": "mishandled.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/mishandled.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/mishandled.sol",
+        "pragma_version": "0.4.0",
+        "source": "https://github.com/seresistvanandras/EthBench/blob/master/Benchmark/Simple/mishandled.sol",
+        "line_number": 14,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "msg.sender.send(amountToWithdraw);"
+    },
+    {
+        "contract_name": "unchecked_return_value.sol",
+        "contract_path": "dataset/unchecked_low_level_calls/unchecked_return_value.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/unchecked_return_value.sol",
+        "pragma_version": "0.4.25",
+        "source": "https://smartcontractsecurity.github.io/SWC-registry/docs/SWC-104#unchecked-return-valuesol",
+        "line_number": 17,
+        "vulnerability_category": "unchecked_low_level_calls",
+        "code": "callee.call();"
+    },
+    {
+        "contract_path": "dataset/arithmetic/overflow_single_tx.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/arithmetic/overflow_single_tx.sol",
+        "line_number": 2,
+        "code": "* @source: https://github.com/ConsenSys/evm-analyzer-benchmark-suite",
+        "pragma_version": "0.4.23"
+    },
+    {
+        "contract_path": "dataset/reentrancy/0x4320e6f8c05b27ab4707cd1f6d5ce6f3e4b3a5a1.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/0x4320e6f8c05b27ab4707cd1f6d5ce6f3e4b3a5a1.sol",
+        "line_number": 32,
+        "code": "}",
+        "pragma_version": "0.4.19"
+    },
+    {
+        "contract_path": "dataset/reentrancy/etherstore.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/etherstore.sol",
+        "line_number": 5,
+        "code": "*/",
+        "pragma_version": "0.4.10"
+    },
+    {
+        "contract_path": "dataset/arithmetic/tokensalechallenge.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/arithmetic/tokensalechallenge.sol",
+        "line_number": 35,
+        "code": "}",
+        "pragma_version": "0.4.21"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0x3f2ef511aa6e75231e4deafc7a3d2ecab3741de2.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x3f2ef511aa6e75231e4deafc7a3d2ecab3741de2.sol",
+        "line_number": 3,
+        "code": "* @author: -",
+        "pragma_version": "0.4.19"
+    },
+    {
+        "contract_path": "dataset/access_control/simple_suicide.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/access_control/simple_suicide.sol",
+        "line_number": 3,
+        "code": "* @author: -",
+        "pragma_version": "0.4.0"
+    },
+    {
+        "contract_path": "dataset/reentrancy/0x93c32845fae42c83a70e5f06214c8433665c2ab5.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/0x93c32845fae42c83a70e5f06214c8433665c2ab5.sol",
+        "line_number": 30,
+        "code": "{",
+        "pragma_version": "0.4.25"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0x4a66ad0bca2d700f11e1f2fc2c106f7d3264504c.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x4a66ad0bca2d700f11e1f2fc2c106f7d3264504c.sol",
+        "line_number": 20,
+        "code": "}",
+        "pragma_version": "0.4.18"
+    },
+    {
+        "contract_path": "dataset/access_control/wallet_03_wrong_constructor.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/access_control/wallet_03_wrong_constructor.sol",
+        "line_number": 36,
+        "code": "function migrateTo(address to) public {",
+        "pragma_version": "0.4.24"
+    },
+    {
+        "contract_path": "dataset/reentrancy/0xaae1f51cf3339f18b6d3f3bdc75a5facd744b0b8.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/0xaae1f51cf3339f18b6d3f3bdc75a5facd744b0b8.sol",
+        "line_number": 92,
+        "code": "LastMsg.Data = _data;",
+        "pragma_version": "0.4.19"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0x3e013fc32a54c4c5b6991ba539dcd0ec4355c859.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x3e013fc32a54c4c5b6991ba539dcd0ec4355c859.sol",
+        "line_number": 27,
+        "code": "require(msg.sender == Owner);",
+        "pragma_version": "0.4.18"
+    },
+    {
+        "contract_path": "dataset/reentrancy/0xf015c35649c82f5467c9c74b7f28ee67665aad68.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/0xf015c35649c82f5467c9c74b7f28ee67665aad68.sol",
+        "line_number": 58,
+        "code": "}",
+        "pragma_version": "0.4.25"
+    },
+    {
+        "contract_path": "dataset/reentrancy/0x7a8721a9d64c74da899424c1b52acbf58ddc9782.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/0x7a8721a9d64c74da899424c1b52acbf58ddc9782.sol",
+        "line_number": 1,
+        "code": "/*",
+        "pragma_version": "0.4.19"
+    },
+    {
+        "contract_path": "dataset/bad_randomness/lottery.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/bad_randomness/lottery.sol",
+        "line_number": 55,
+        "code": "if(msg.sender != organizer) { throw; }",
+        "pragma_version": "0.4.0"
+    },
+    {
+        "contract_path": "dataset/time_manipulation/governmental_survey.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/time_manipulation/governmental_survey.sol",
+        "line_number": 18,
+        "code": "owner = msg.sender;",
+        "pragma_version": "0.4.0"
+    },
+    {
+        "contract_path": "dataset/bad_randomness/random_number_generator.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/bad_randomness/random_number_generator.sol",
+        "line_number": 7,
+        "code": "pragma solidity ^0.4.25;",
+        "pragma_version": "0.4.25"
+    },
+    {
+        "contract_path": "dataset/arithmetic/integer_overflow_mul.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/arithmetic/integer_overflow_mul.sol",
+        "line_number": 13,
+        "code": "uint public count = 2;",
+        "pragma_version": "0.4.19"
+    },
+    {
+        "contract_path": "dataset/arithmetic/timelock.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/arithmetic/timelock.sol",
+        "line_number": 23,
+        "code": "}",
+        "pragma_version": "0.4.10"
+    },
+    {
+        "contract_path": "dataset/time_manipulation/lottopollo.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/time_manipulation/lottopollo.sol",
+        "line_number": 17,
+        "code": "leader.send( this.balance );",
+        "pragma_version": "0.4.0"
+    },
+    {
+        "contract_path": "dataset/access_control/rubixi.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/access_control/rubixi.sol",
+        "line_number": 118,
+        "code": "function changeFeePercentage(uint _fee) onlyowner {",
+        "pragma_version": "0.4.15"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0x8fd1e427396ddb511533cf9abdbebd0a7e08da35.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x8fd1e427396ddb511533cf9abdbebd0a7e08da35.sol",
+        "line_number": 16,
+        "code": "onlyOwner",
+        "pragma_version": "0.4.18"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0xe894d54dca59cb53fe9cbc5155093605c7068220.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0xe894d54dca59cb53fe9cbc5155093605c7068220.sol",
+        "line_number": 3,
+        "code": "* @author: -",
+        "pragma_version": "0.4.24"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0xe82f0742a71a02b9e9ffc142fdcb6eb1ed06fb87.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0xe82f0742a71a02b9e9ffc142fdcb6eb1ed06fb87.sol",
+        "line_number": 37,
+        "code": "require(msg.sender == Owner);",
+        "pragma_version": "0.4.19"
+    },
+    {
+        "contract_path": "dataset/access_control/proxy.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/access_control/proxy.sol",
+        "line_number": 2,
+        "code": "* @source: https://smartcontractsecurity.github.io/SWC-registry/docs/SWC-112#proxysol",
+        "pragma_version": "0.4.24"
+    },
+    {
+        "contract_path": "dataset/arithmetic/integer_overflow_add.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/arithmetic/integer_overflow_add.sol",
+        "line_number": 13,
+        "code": "uint public count = 1;",
+        "pragma_version": "0.4.19"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0x7d09edb07d23acb532a82be3da5c17d9d85806b4.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x7d09edb07d23acb532a82be3da5c17d9d85806b4.sol",
+        "line_number": 84,
+        "code": "onlyOwner()",
+        "pragma_version": "0.4.24"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/mishandled.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/mishandled.sol",
+        "line_number": 12,
+        "code": "userBalances[msg.sender] = 0;",
+        "pragma_version": "0.4.0"
+    },
+    {
+        "contract_path": "dataset/reentrancy/reentrancy_cross_function.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/reentrancy_cross_function.sol",
+        "line_number": 22,
+        "code": "uint amountToWithdraw = userBalances[msg.sender];",
+        "pragma_version": "0.4.24"
+    },
+    {
+        "contract_path": "dataset/reentrancy/0x7541b76cb60f4c60af330c208b0623b7f54bf615.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/0x7541b76cb60f4c60af330c208b0623b7f54bf615.sol",
+        "line_number": 83,
+        "code": "History.push(LastMsg);",
+        "pragma_version": "0.4.25"
+    },
+    {
+        "contract_path": "dataset/other/crypto_roulette.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/other/crypto_roulette.sol",
+        "line_number": 35,
+        "code": "}",
+        "pragma_version": "0.4.19"
+    },
+    {
+        "contract_path": "dataset/reentrancy/0x627fa62ccbb1c1b04ffaecd72a53e37fc0e17839.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/0x627fa62ccbb1c1b04ffaecd72a53e37fc0e17839.sol",
+        "line_number": 21,
+        "code": "function confirmOwner()",
+        "pragma_version": "0.4.19"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0xbebbfe5b549f5db6e6c78ca97cac19d1fb03082c.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0xbebbfe5b549f5db6e6c78ca97cac19d1fb03082c.sol",
+        "line_number": 25,
+        "code": "if (msg.sender == tx.origin) {",
+        "pragma_version": "0.4.24"
+    },
+    {
+        "contract_path": "dataset/reentrancy/0xcead721ef5b11f1a7b530171aab69b16c5e66b6e.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/0xcead721ef5b11f1a7b530171aab69b16c5e66b6e.sol",
+        "line_number": 82,
+        "code": "LastMsg.Data = _data;",
+        "pragma_version": "0.4.25"
+    },
+    {
+        "contract_path": "dataset/denial_of_service/dos_address.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/denial_of_service/dos_address.sol",
+        "line_number": 26,
+        "code": "return true;",
+        "pragma_version": "0.4.25"
+    },
+    {
+        "contract_path": "dataset/reentrancy/0x7541b76cb60f4c60af330c208b0623b7f54bf615.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/0x7541b76cb60f4c60af330c208b0623b7f54bf615.sol",
+        "line_number": 9,
+        "code": "contract U_BANK",
+        "pragma_version": "0.4.25"
+    },
+    {
+        "contract_path": "dataset/reentrancy/etherbank.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/etherbank.sol",
+        "line_number": 19,
+        "code": "uint amountToWithdraw = userBalances[msg.sender];",
+        "pragma_version": "0.4.0"
+    },
+    {
+        "contract_path": "dataset/denial_of_service/dos_address.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/denial_of_service/dos_address.sol",
+        "line_number": 14,
+        "code": "function emptyCreditors() public {",
+        "pragma_version": "0.4.25"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0xa1fceeff3acc57d257b917e30c4df661401d6431.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0xa1fceeff3acc57d257b917e30c4df661401d6431.sol",
+        "line_number": 26,
+        "code": "require(vs.length > 0);",
+        "pragma_version": "0.4.18"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0x7a4349a749e59a5736efb7826ee3496a2dfd5489.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x7a4349a749e59a5736efb7826ee3496a2dfd5489.sol",
+        "line_number": 10,
+        "code": "{",
+        "pragma_version": "0.4.19"
+    },
+    {
+        "contract_path": "dataset/reentrancy/spank_chain_payment.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/spank_chain_payment.sol",
+        "line_number": 143,
+        "code": "return keccak256(abi.encodePacked(prefix, uintToString(len), _msg));",
+        "pragma_version": "0.4.23"
+    },
+    {
+        "contract_path": "dataset/reentrancy/0x8c7777c45481dba411450c228cb692ac3d550344.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/0x8c7777c45481dba411450c228cb692ac3d550344.sol",
+        "line_number": 72,
+        "code": "LastMsg.Time = now;",
+        "pragma_version": "0.4.19"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0x8fd1e427396ddb511533cf9abdbebd0a7e08da35.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x8fd1e427396ddb511533cf9abdbebd0a7e08da35.sol",
+        "line_number": 34,
+        "code": "}",
+        "pragma_version": "0.4.18"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0x5aa88d2901c68fda244f1d0584400368d2c8e739.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x5aa88d2901c68fda244f1d0584400368d2c8e739.sol",
+        "line_number": 38,
+        "code": "adr.transfer(this.balance+msg.value);",
+        "pragma_version": "0.4.18"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0xb11b2fed6c9354f7aa2f658d3b4d7b31d8a13b77.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0xb11b2fed6c9354f7aa2f658d3b4d7b31d8a13b77.sol",
+        "line_number": 24,
+        "code": "function Vault() public payable {",
+        "pragma_version": "0.4.24"
+    },
+    {
+        "contract_path": "dataset/reentrancy/0xf015c35649c82f5467c9c74b7f28ee67665aad68.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/0xf015c35649c82f5467c9c74b7f28ee67665aad68.sol",
+        "line_number": 18,
+        "code": "LogFile.AddMessage(msg.sender,msg.value,\"Put\");",
+        "pragma_version": "0.4.25"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0x39cfd754c85023648bf003bea2dd498c5612abfa.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x39cfd754c85023648bf003bea2dd498c5612abfa.sol",
+        "line_number": 64,
+        "code": "Deposit();",
+        "pragma_version": "0.4.18"
+    },
+    {
+        "contract_path": "dataset/arithmetic/integer_overflow_mul.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/arithmetic/integer_overflow_mul.sol",
+        "line_number": 2,
+        "code": "* @source: https://github.com/SmartContractSecurity/SWC-registry/blob/master/test_cases/integer_overflow_and_underflow/integer_overflow_mul.sol",
+        "pragma_version": "0.4.19"
+    },
+    {
+        "contract_path": "dataset/arithmetic/overflow_single_tx.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/arithmetic/overflow_single_tx.sol",
+        "line_number": 10,
+        "code": "pragma solidity ^0.4.23;",
+        "pragma_version": "0.4.23"
+    },
+    {
+        "contract_path": "dataset/bad_randomness/lottery.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/bad_randomness/lottery.sol",
+        "line_number": 55,
+        "code": "if(msg.sender != organizer) { throw; }",
+        "pragma_version": "0.4.0"
+    },
+    {
+        "contract_path": "dataset/access_control/wallet_02_refund_nosub.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/access_control/wallet_02_refund_nosub.sol",
+        "line_number": 25,
+        "code": "balances[msg.sender] += msg.value;",
+        "pragma_version": "0.4.24"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0x2972d548497286d18e92b5fa1f8f9139e5653fd2.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x2972d548497286d18e92b5fa1f8f9139e5653fd2.sol",
+        "line_number": 15,
+        "code": "}",
+        "pragma_version": "0.4.25"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0xf70d589d76eebdd7c12cc5eec99f8f6fa4233b9e.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0xf70d589d76eebdd7c12cc5eec99f8f6fa4233b9e.sol",
+        "line_number": 1,
+        "code": "/*",
+        "pragma_version": "0.4.19"
+    },
+    {
+        "contract_path": "dataset/arithmetic/integer_overflow_multitx_onefunc_feasible.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/arithmetic/integer_overflow_multitx_onefunc_feasible.sol",
+        "line_number": 22,
+        "code": "count -= input;",
+        "pragma_version": "0.4.23"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0x8fd1e427396ddb511533cf9abdbebd0a7e08da35.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x8fd1e427396ddb511533cf9abdbebd0a7e08da35.sol",
+        "line_number": 97,
+        "code": "_addr.call.value(_wei);",
+        "pragma_version": "0.4.18"
+    },
+    {
+        "contract_path": "dataset/reentrancy/0x7541b76cb60f4c60af330c208b0623b7f54bf615.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/0x7541b76cb60f4c60af330c208b0623b7f54bf615.sol",
+        "line_number": 83,
+        "code": "History.push(LastMsg);",
+        "pragma_version": "0.4.25"
+    },
+    {
+        "contract_path": "dataset/time_manipulation/governmental_survey.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/time_manipulation/governmental_survey.sol",
+        "line_number": 8,
+        "code": "pragma solidity ^0.4.0;",
+        "pragma_version": "0.4.0"
+    },
+    {
+        "contract_path": "dataset/reentrancy/reentrancy_insecure.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/reentrancy_insecure.sol",
+        "line_number": 14,
+        "code": "function withdrawBalance() public {",
+        "pragma_version": "0.5.0"
+    },
+    {
+        "contract_path": "dataset/bad_randomness/lottery.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/bad_randomness/lottery.sol",
+        "line_number": 59,
+        "code": "}",
+        "pragma_version": "0.4.0"
+    },
+    {
+        "contract_path": "dataset/access_control/mapping_write.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/access_control/mapping_write.sol",
+        "line_number": 24,
+        "code": "return map[key];",
+        "pragma_version": "0.4.24"
+    },
+    {
+        "contract_path": "dataset/reentrancy/spank_chain_payment.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/spank_chain_payment.sol",
+        "line_number": 513,
+        "code": "abi.encodePacked(",
+        "pragma_version": "0.4.23"
+    },
+    {
+        "contract_path": "dataset/reentrancy/modifier_reentrancy.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/modifier_reentrancy.sol",
+        "line_number": 33,
+        "code": "return(keccak256(abi.encodePacked(\"Nu Token\")));",
+        "pragma_version": "0.4.24"
+    },
+    {
+        "contract_path": "dataset/arithmetic/BECToken.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/arithmetic/BECToken.sol",
+        "line_number": 153,
+        "code": "}",
+        "pragma_version": "0.4.16"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0x4a66ad0bca2d700f11e1f2fc2c106f7d3264504c.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x4a66ad0bca2d700f11e1f2fc2c106f7d3264504c.sol",
+        "line_number": 20,
+        "code": "}",
+        "pragma_version": "0.4.18"
+    },
+    {
+        "contract_path": "dataset/reentrancy/0xaae1f51cf3339f18b6d3f3bdc75a5facd744b0b8.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/0xaae1f51cf3339f18b6d3f3bdc75a5facd744b0b8.sol",
+        "line_number": 20,
+        "code": "public",
+        "pragma_version": "0.4.19"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0x524960d55174d912768678d8c606b4d50b79d7b1.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x524960d55174d912768678d8c606b4d50b79d7b1.sol",
+        "line_number": 25,
+        "code": "}",
+        "pragma_version": "0.4.13"
+    },
+    {
+        "contract_path": "dataset/short_addresses/short_address_example.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/short_addresses/short_address_example.sol",
+        "line_number": 18,
+        "code": "function sendCoin(address to, uint amount) returns(bool sufficient) {",
+        "pragma_version": "0.4.11"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0xf29ebe930a539a60279ace72c707cba851a57707.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0xf29ebe930a539a60279ace72c707cba851a57707.sol",
+        "line_number": 1,
+        "code": "/*",
+        "pragma_version": "0.4.24"
+    },
+    {
+        "contract_path": "dataset/access_control/mycontract.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/access_control/mycontract.sol",
+        "line_number": 4,
+        "code": "* @vulnerable_at_lines: 20",
+        "pragma_version": "0.4.24"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0xe82f0742a71a02b9e9ffc142fdcb6eb1ed06fb87.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0xe82f0742a71a02b9e9ffc142fdcb6eb1ed06fb87.sol",
+        "line_number": 20,
+        "code": "{                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               Owner.transfer(this.balance);",
+        "pragma_version": "0.4.19"
+    },
+    {
+        "contract_path": "dataset/reentrancy/0x01f8c4e3fa3edeb29e514cba738d87ce8c091d3f.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/0x01f8c4e3fa3edeb29e514cba738d87ce8c091d3f.sol",
+        "line_number": 73,
+        "code": "contract LogFile",
+        "pragma_version": "0.4.19"
+    },
+    {
+        "contract_path": "dataset/arithmetic/overflow_simple_add.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/arithmetic/overflow_simple_add.sol",
+        "line_number": 3,
+        "code": "* @author: -",
+        "pragma_version": "0.4.25"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0xb37f18af15bafb869a065b61fc83cfc44ed9cc27.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0xb37f18af15bafb869a065b61fc83cfc44ed9cc27.sol",
+        "line_number": 5,
+        "code": "*/",
+        "pragma_version": "0.4.24"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x663e4229142a27f00bafb5d087e1e730648314c3.sol",
+        "line_number": 516,
+        "code": "function getMetadata(uint256 _tokenId, string) public view returns (bytes32[4] buffer, uint256 count) {",
+        "pragma_version": "0.4.24"
+    },
+    {
+        "contract_path": "dataset/reentrancy/spank_chain_payment.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/spank_chain_payment.sol",
+        "line_number": 541,
+        "code": "}",
+        "pragma_version": "0.4.23"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0x3f2ef511aa6e75231e4deafc7a3d2ecab3741de2.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x3f2ef511aa6e75231e4deafc7a3d2ecab3741de2.sol",
+        "line_number": 14,
+        "code": "function()",
+        "pragma_version": "0.4.19"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0xf2570186500a46986f3139f65afedc2afe4f445d.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0xf2570186500a46986f3139f65afedc2afe4f445d.sol",
+        "line_number": 7,
+        "code": "pragma solidity ^0.4.16;",
+        "pragma_version": "0.4.16"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0x524960d55174d912768678d8c606b4d50b79d7b1.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x524960d55174d912768678d8c606b4d50b79d7b1.sol",
+        "line_number": 15,
+        "code": "address c2;",
+        "pragma_version": "0.4.13"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0x610495793564aed0f9c7fc48dc4c7c9151d34fd6.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x610495793564aed0f9c7fc48dc4c7c9151d34fd6.sol",
+        "line_number": 29,
+        "code": "}",
+        "pragma_version": "0.4.24"
+    },
+    {
+        "contract_path": "dataset/reentrancy/etherstore.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/etherstore.sol",
+        "line_number": 3,
+        "code": "* @author: Suhabe Bugrara",
+        "pragma_version": "0.4.10"
+    },
+    {
+        "contract_path": "dataset/time_manipulation/ether_lotto.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/time_manipulation/ether_lotto.sol",
+        "line_number": 2,
+        "code": "* @article: https://blog.positive.com/predicting-random-numbers-in-ethereum-smart-contracts-e5358c6b8620",
+        "pragma_version": "0.4.15"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0xf70d589d76eebdd7c12cc5eec99f8f6fa4233b9e.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0xf70d589d76eebdd7c12cc5eec99f8f6fa4233b9e.sol",
+        "line_number": 15,
+        "code": "payable",
+        "pragma_version": "0.4.19"
+    },
+    {
+        "contract_path": "dataset/reentrancy/0xf015c35649c82f5467c9c74b7f28ee67665aad68.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/0xf015c35649c82f5467c9c74b7f28ee67665aad68.sol",
+        "line_number": 1,
+        "code": "/*",
+        "pragma_version": "0.4.25"
+    },
+    {
+        "contract_path": "dataset/arithmetic/insecure_transfer.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/arithmetic/insecure_transfer.sol",
+        "line_number": 21,
+        "code": "}",
+        "pragma_version": "0.4.10"
+    },
+    {
+        "contract_path": "dataset/access_control/incorrect_constructor_name1.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/access_control/incorrect_constructor_name1.sol",
+        "line_number": 15,
+        "code": "}",
+        "pragma_version": "0.4.24"
+    },
+    {
+        "contract_path": "dataset/access_control/proxy.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/access_control/proxy.sol",
+        "line_number": 2,
+        "code": "* @source: https://smartcontractsecurity.github.io/SWC-registry/docs/SWC-112#proxysol",
+        "pragma_version": "0.4.24"
+    },
+    {
+        "contract_path": "dataset/denial_of_service/list_dos.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/denial_of_service/list_dos.sol",
+        "line_number": 10,
+        "code": "contract Government {",
+        "pragma_version": "0.4.0"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0x89c1b3807d4c67df034fffb62f3509561218d30b.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x89c1b3807d4c67df034fffb62f3509561218d30b.sol",
+        "line_number": 61,
+        "code": "}",
+        "pragma_version": "0.4.9"
+    },
+    {
+        "contract_path": "dataset/reentrancy/0x7a8721a9d64c74da899424c1b52acbf58ddc9782.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/0x7a8721a9d64c74da899424c1b52acbf58ddc9782.sol",
+        "line_number": 86,
+        "code": "History.push(LastMsg);",
+        "pragma_version": "0.4.19"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0xb37f18af15bafb869a065b61fc83cfc44ed9cc27.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0xb37f18af15bafb869a065b61fc83cfc44ed9cc27.sol",
+        "line_number": 14,
+        "code": "modifier onlyOwner {",
+        "pragma_version": "0.4.24"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0xf2570186500a46986f3139f65afedc2afe4f445d.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0xf2570186500a46986f3139f65afedc2afe4f445d.sol",
+        "line_number": 5,
+        "code": "*/",
+        "pragma_version": "0.4.16"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0xe09b1ab8111c2729a76f16de96bc86a7af837928.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0xe09b1ab8111c2729a76f16de96bc86a7af837928.sol",
+        "line_number": 125,
+        "code": "}",
+        "pragma_version": "0.4.24"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0xe09b1ab8111c2729a76f16de96bc86a7af837928.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0xe09b1ab8111c2729a76f16de96bc86a7af837928.sol",
+        "line_number": 209,
+        "code": "function donateForContractHealth()",
+        "pragma_version": "0.4.24"
+    },
+    {
+        "contract_path": "dataset/reentrancy/0x23a91059fdc9579a9fbd0edc5f2ea0bfdb70deb4.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/0x23a91059fdc9579a9fbd0edc5f2ea0bfdb70deb4.sol",
+        "line_number": 13,
+        "code": "uint public MinDeposit = 1 ether;",
+        "pragma_version": "0.4.19"
+    },
+    {
+        "contract_path": "dataset/arithmetic/timelock.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/arithmetic/timelock.sol",
+        "line_number": 28,
+        "code": "uint transferValue = balances[msg.sender];",
+        "pragma_version": "0.4.10"
+    },
+    {
+        "contract_path": "dataset/time_manipulation/timed_crowdsale.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/time_manipulation/timed_crowdsale.sol",
+        "line_number": 7,
+        "code": "pragma solidity ^0.4.25;",
+        "pragma_version": "0.4.25"
+    },
+    {
+        "contract_path": "dataset/access_control/wallet_04_confused_sign.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/access_control/wallet_04_confused_sign.sol",
+        "line_number": 42,
+        "code": "}",
+        "pragma_version": "0.4.24"
+    },
+    {
+        "contract_path": "dataset/arithmetic/integer_overflow_add.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/arithmetic/integer_overflow_add.sol",
+        "line_number": 2,
+        "code": "* @source: https://github.com/ConsenSys/evm-analyzer-benchmark-suite/blob/master/benchmarks/integer_overflow_add.sol",
+        "pragma_version": "0.4.19"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0x0cbe050f75bc8f8c2d6c0d249fea125fd6e1acc9.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x0cbe050f75bc8f8c2d6c0d249fea125fd6e1acc9.sol",
+        "line_number": 12,
+        "code": "a.call();",
+        "pragma_version": "0.4.10"
+    },
+    {
+        "contract_path": "dataset/time_manipulation/ether_lotto.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/time_manipulation/ether_lotto.sol",
+        "line_number": 52,
+        "code": "msg.sender.transfer(pot - FEE_AMOUNT);",
+        "pragma_version": "0.4.15"
+    },
+    {
+        "contract_path": "dataset/arithmetic/BECToken.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/arithmetic/BECToken.sol",
+        "line_number": 128,
+        "code": "/**",
+        "pragma_version": "0.4.16"
+    },
+    {
+        "contract_path": "dataset/reentrancy/reentrancy_simple.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/reentrancy_simple.sol",
+        "line_number": 7,
+        "code": "pragma solidity ^0.4.15;",
+        "pragma_version": "0.4.15"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0x8fd1e427396ddb511533cf9abdbebd0a7e08da35.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x8fd1e427396ddb511533cf9abdbebd0a7e08da35.sol",
+        "line_number": 58,
+        "code": "MinDeposit = 1 ether;",
+        "pragma_version": "0.4.18"
+    },
+    {
+        "contract_path": "dataset/reentrancy/0xbaf51e761510c1a11bf48dd87c0307ac8a8c8a4f.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/0xbaf51e761510c1a11bf48dd87c0307ac8a8c8a4f.sol",
+        "line_number": 36,
+        "code": "payable",
+        "pragma_version": "0.4.19"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0xbebbfe5b549f5db6e6c78ca97cac19d1fb03082c.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0xbebbfe5b549f5db6e6c78ca97cac19d1fb03082c.sol",
+        "line_number": 16,
+        "code": "}",
+        "pragma_version": "0.4.24"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0x70f9eddb3931491aab1aeafbc1e7f1ca2a012db4.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x70f9eddb3931491aab1aeafbc1e7f1ca2a012db4.sol",
+        "line_number": 4,
+        "code": "* @vulnerable_at_lines: 29",
+        "pragma_version": "0.4.19"
+    },
+    {
+        "contract_path": "dataset/reentrancy/reentrance.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/reentrance.sol",
+        "line_number": 11,
+        "code": "mapping(address => uint) public balances;",
+        "pragma_version": "0.4.18"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0xe4eabdca81e31d9acbc4af76b30f532b6ed7f3bf.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0xe4eabdca81e31d9acbc4af76b30f532b6ed7f3bf.sol",
+        "line_number": 32,
+        "code": "public",
+        "pragma_version": "0.4.19"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0xec329ffc97d75fe03428ae155fc7793431487f63.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0xec329ffc97d75fe03428ae155fc7793431487f63.sol",
+        "line_number": 55,
+        "code": "}",
+        "pragma_version": "0.4.11"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0xb11b2fed6c9354f7aa2f658d3b4d7b31d8a13b77.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0xb11b2fed6c9354f7aa2f658d3b4d7b31d8a13b77.sol",
+        "line_number": 4,
+        "code": "* @vulnerable_at_lines: 14",
+        "pragma_version": "0.4.24"
+    },
+    {
+        "contract_path": "dataset/access_control/mapping_write.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/access_control/mapping_write.sol",
+        "line_number": 13,
+        "code": "uint256[] map;",
+        "pragma_version": "0.4.24"
+    },
+    {
+        "contract_path": "dataset/reentrancy/spank_chain_payment.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/spank_chain_payment.sol",
+        "line_number": 803,
+        "code": "require(",
+        "pragma_version": "0.4.23"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0x3f2ef511aa6e75231e4deafc7a3d2ecab3741de2.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x3f2ef511aa6e75231e4deafc7a3d2ecab3741de2.sol",
+        "line_number": 45,
+        "code": "adr.call.value(msg.value)(data);",
+        "pragma_version": "0.4.19"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0x07f7ecb66d788ab01dc93b9b71a88401de7d0f2e.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x07f7ecb66d788ab01dc93b9b71a88401de7d0f2e.sol",
+        "line_number": 250,
+        "code": "{",
+        "pragma_version": "0.4.24"
+    },
+    {
+        "contract_path": "dataset/bad_randomness/random_number_generator.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/bad_randomness/random_number_generator.sol",
+        "line_number": 7,
+        "code": "pragma solidity ^0.4.25;",
+        "pragma_version": "0.4.25"
+    },
+    {
+        "contract_path": "dataset/reentrancy/reentrancy_insecure.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/reentrancy_insecure.sol",
+        "line_number": 7,
+        "code": "pragma solidity ^0.5.0;",
+        "pragma_version": "0.5.0"
+    },
+    {
+        "contract_path": "dataset/access_control/FibonacciBalance.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/access_control/FibonacciBalance.sol",
+        "line_number": 38,
+        "code": "require(fibonacciLibrary.delegatecall(msg.data));",
+        "pragma_version": "0.4.22"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0xf2570186500a46986f3139f65afedc2afe4f445d.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0xf2570186500a46986f3139f65afedc2afe4f445d.sol",
+        "line_number": 2,
+        "code": "* @source: etherscan.io",
+        "pragma_version": "0.4.16"
+    },
+    {
+        "contract_path": "dataset/denial_of_service/dos_address.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/denial_of_service/dos_address.sol",
+        "line_number": 4,
+        "code": "* @vulnerable_at_lines: 16,17,18",
+        "pragma_version": "0.4.25"
+    },
+    {
+        "contract_path": "dataset/access_control/arbitrary_location_write_simple.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/access_control/arbitrary_location_write_simple.sol",
+        "line_number": 38,
+        "code": "selfdestruct(msg.sender);",
+        "pragma_version": "0.4.25"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0xdb1c55f6926e7d847ddf8678905ad871a68199d2.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0xdb1c55f6926e7d847ddf8678905ad871a68199d2.sol",
+        "line_number": 33,
+        "code": "function Command(address adr,bytes data)",
+        "pragma_version": "0.4.19"
+    },
+    {
+        "contract_path": "dataset/access_control/FibonacciBalance.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/access_control/FibonacciBalance.sol",
+        "line_number": 62,
+        "code": "}",
+        "pragma_version": "0.4.22"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0x39cfd754c85023648bf003bea2dd498c5612abfa.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x39cfd754c85023648bf003bea2dd498c5612abfa.sol",
+        "line_number": 11,
+        "code": "address newOwner;",
+        "pragma_version": "0.4.18"
+    },
+    {
+        "contract_path": "dataset/reentrancy/0xbe4041d55db380c5ae9d4a9b9703f1ed4e7e3888.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/0xbe4041d55db380c5ae9d4a9b9703f1ed4e7e3888.sol",
+        "line_number": 9,
+        "code": "contract MONEY_BOX",
+        "pragma_version": "0.4.19"
+    },
+    {
+        "contract_path": "dataset/access_control/proxy.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/access_control/proxy.sol",
+        "line_number": 22,
+        "code": "}",
+        "pragma_version": "0.4.24"
+    },
+    {
+        "contract_path": "dataset/reentrancy/reentrance.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/reentrance.sol",
+        "line_number": 26,
+        "code": "}",
+        "pragma_version": "0.4.18"
+    },
+    {
+        "contract_path": "dataset/reentrancy/0x8c7777c45481dba411450c228cb692ac3d550344.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/0x8c7777c45481dba411450c228cb692ac3d550344.sol",
+        "line_number": 75,
+        "code": "History.push(LastMsg);",
+        "pragma_version": "0.4.19"
+    },
+    {
+        "contract_path": "dataset/arithmetic/overflow_simple_add.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/arithmetic/overflow_simple_add.sol",
+        "line_number": 14,
+        "code": "balance += deposit;",
+        "pragma_version": "0.4.25"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0x19cf8481ea15427a98ba3cdd6d9e14690011ab10.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x19cf8481ea15427a98ba3cdd6d9e14690011ab10.sol",
+        "line_number": 162,
+        "code": "uint256 public otherchainstotalsupply =1.0 ether;",
+        "pragma_version": "0.4.11"
+    },
+    {
+        "contract_path": "dataset/reentrancy/0xb5e1b1ee15c6fa0e48fce100125569d430f1bd12.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/0xb5e1b1ee15c6fa0e48fce100125569d430f1bd12.sol",
+        "line_number": 27,
+        "code": "{",
+        "pragma_version": "0.4.19"
+    },
+    {
+        "contract_path": "dataset/denial_of_service/dos_address.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/denial_of_service/dos_address.sol",
+        "line_number": 16,
+        "code": "if(creditorAddresses.length>1500) {",
+        "pragma_version": "0.4.25"
+    },
+    {
+        "contract_path": "dataset/reentrancy/spank_chain_payment.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/spank_chain_payment.sol",
+        "line_number": 406,
+        "code": "require(Channels[_lcID].token.transferFrom(msg.sender, this, _balances[1]),\"CreateChannel: token transfer failure\");",
+        "pragma_version": "0.4.23"
+    },
+    {
+        "contract_path": "dataset/bad_randomness/guess_the_random_number.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/bad_randomness/guess_the_random_number.sol",
+        "line_number": 22,
+        "code": "function guess(uint8 n) public payable {",
+        "pragma_version": "0.4.21"
+    },
+    {
+        "contract_path": "dataset/denial_of_service/dos_address.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/denial_of_service/dos_address.sol",
+        "line_number": 5,
+        "code": "*/",
+        "pragma_version": "0.4.25"
+    },
+    {
+        "contract_path": "dataset/access_control/multiowned_vulnerable.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/access_control/multiowned_vulnerable.sol",
+        "line_number": 30,
+        "code": "_;",
+        "pragma_version": "0.4.23"
+    },
+    {
+        "contract_path": "dataset/arithmetic/integer_overflow_add.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/arithmetic/integer_overflow_add.sol",
+        "line_number": 3,
+        "code": "* @author: -",
+        "pragma_version": "0.4.19"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0x8fd1e427396ddb511533cf9abdbebd0a7e08da35.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x8fd1e427396ddb511533cf9abdbebd0a7e08da35.sol",
+        "line_number": 28,
+        "code": "}",
+        "pragma_version": "0.4.18"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0x4a66ad0bca2d700f11e1f2fc2c106f7d3264504c.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x4a66ad0bca2d700f11e1f2fc2c106f7d3264504c.sol",
+        "line_number": 9,
+        "code": "contract EBU{",
+        "pragma_version": "0.4.18"
+    },
+    {
+        "contract_path": "dataset/bad_randomness/guess_the_random_number.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/bad_randomness/guess_the_random_number.sol",
+        "line_number": 12,
+        "code": "function GuessTheRandomNumberChallenge() public payable {",
+        "pragma_version": "0.4.21"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/mishandled.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/mishandled.sol",
+        "line_number": 10,
+        "code": "function withdrawBalance() {",
+        "pragma_version": "0.4.0"
+    },
+    {
+        "contract_path": "dataset/bad_randomness/lottery.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/bad_randomness/lottery.sol",
+        "line_number": 57,
+        "code": "for (uint i = 0; i < bets.length; i++) {",
+        "pragma_version": "0.4.0"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0x3e013fc32a54c4c5b6991ba539dcd0ec4355c859.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x3e013fc32a54c4c5b6991ba539dcd0ec4355c859.sol",
+        "line_number": 20,
+        "code": "Owner.transfer(this.balance);",
+        "pragma_version": "0.4.18"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0xf29ebe930a539a60279ace72c707cba851a57707.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0xf29ebe930a539a60279ace72c707cba851a57707.sol",
+        "line_number": 1,
+        "code": "/*",
+        "pragma_version": "0.4.24"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0xf70d589d76eebdd7c12cc5eec99f8f6fa4233b9e.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0xf70d589d76eebdd7c12cc5eec99f8f6fa4233b9e.sol",
+        "line_number": 20,
+        "code": "function GetFreebie()",
+        "pragma_version": "0.4.19"
+    },
+    {
+        "contract_path": "dataset/arithmetic/tokensalechallenge.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/arithmetic/tokensalechallenge.sol",
+        "line_number": 9,
+        "code": "contract TokenSaleChallenge {",
+        "pragma_version": "0.4.21"
+    },
+    {
+        "contract_path": "dataset/reentrancy/spank_chain_payment.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/spank_chain_payment.sol",
+        "line_number": 119,
+        "code": "if ((bresult[0] >= 48) && (bresult[0] <= 57)) {",
+        "pragma_version": "0.4.23"
+    },
+    {
+        "contract_path": "dataset/arithmetic/BECToken.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/arithmetic/BECToken.sol",
+        "line_number": 284,
+        "code": "* Public variables of the token",
+        "pragma_version": "0.4.16"
+    },
+    {
+        "contract_path": "dataset/reentrancy/0x941d225236464a25eb18076df7da6a91d0f95e9e.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/0x941d225236464a25eb18076df7da6a91d0f95e9e.sol",
+        "line_number": 78,
+        "code": "History.push(LastMsg);",
+        "pragma_version": "0.4.19"
+    },
+    {
+        "contract_path": "dataset/time_manipulation/governmental_survey.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/time_manipulation/governmental_survey.sol",
+        "line_number": 14,
+        "code": "uint public lastInvestmentTimestamp;",
+        "pragma_version": "0.4.0"
+    },
+    {
+        "contract_path": "dataset/reentrancy/spank_chain_payment.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/spank_chain_payment.sol",
+        "line_number": 518,
+        "code": "bytes32(0x0),",
+        "pragma_version": "0.4.23"
+    },
+    {
+        "contract_path": "dataset/access_control/rubixi.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/access_control/rubixi.sol",
+        "line_number": 1,
+        "code": "/*",
+        "pragma_version": "0.4.15"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0x958a8f594101d2c0485a52319f29b2647f2ebc06.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x958a8f594101d2c0485a52319f29b2647f2ebc06.sol",
+        "line_number": 142,
+        "code": "}",
+        "pragma_version": "0.4.16"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0x5aa88d2901c68fda244f1d0584400368d2c8e739.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x5aa88d2901c68fda244f1d0584400368d2c8e739.sol",
+        "line_number": 36,
+        "code": "if(msg.value>=this.balance)",
+        "pragma_version": "0.4.18"
+    },
+    {
+        "contract_path": "dataset/arithmetic/integer_overflow_mapping_sym_1.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/arithmetic/integer_overflow_mapping_sym_1.sol",
+        "line_number": 5,
+        "code": "*/",
+        "pragma_version": "0.4.11"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0x3e013fc32a54c4c5b6991ba539dcd0ec4355c859.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x3e013fc32a54c4c5b6991ba539dcd0ec4355c859.sol",
+        "line_number": 3,
+        "code": "* @author: -",
+        "pragma_version": "0.4.18"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/mishandled.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/mishandled.sol",
+        "line_number": 5,
+        "code": "*/",
+        "pragma_version": "0.4.0"
+    },
+    {
+        "contract_path": "dataset/access_control/parity_wallet_bug_2.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/access_control/parity_wallet_bug_2.sol",
+        "line_number": 158,
+        "code": "if (m_numOwners >= c_maxOwners)",
+        "pragma_version": "0.4.9"
+    },
+    {
+        "contract_path": "dataset/time_manipulation/timed_crowdsale.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/time_manipulation/timed_crowdsale.sol",
+        "line_number": 13,
+        "code": "return block.timestamp >= 1546300800;",
+        "pragma_version": "0.4.25"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0xe4eabdca81e31d9acbc4af76b30f532b6ed7f3bf.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0xe4eabdca81e31d9acbc4af76b30f532b6ed7f3bf.sol",
+        "line_number": 40,
+        "code": "public",
+        "pragma_version": "0.4.19"
+    },
+    {
+        "contract_path": "dataset/short_addresses/short_address_example.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/short_addresses/short_address_example.sol",
+        "line_number": 26,
+        "code": "function getBalance(address addr) constant returns(uint) {",
+        "pragma_version": "0.4.11"
+    },
+    {
+        "contract_path": "dataset/reentrancy/modifier_reentrancy.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/modifier_reentrancy.sol",
+        "line_number": 27,
+        "code": "_;",
+        "pragma_version": "0.4.24"
+    },
+    {
+        "contract_path": "dataset/denial_of_service/auction.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/denial_of_service/auction.sol",
+        "line_number": 26,
+        "code": "currentFrontrunner = msg.sender;",
+        "pragma_version": "0.4.15"
+    },
+    {
+        "contract_path": "dataset/reentrancy/0x7541b76cb60f4c60af330c208b0623b7f54bf615.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/0x7541b76cb60f4c60af330c208b0623b7f54bf615.sol",
+        "line_number": 21,
+        "code": "function Collect(uint _am)",
+        "pragma_version": "0.4.25"
+    },
+    {
+        "contract_path": "dataset/reentrancy/0xf015c35649c82f5467c9c74b7f28ee67665aad68.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/0xf015c35649c82f5467c9c74b7f28ee67665aad68.sol",
+        "line_number": 26,
+        "code": "if( acc.balance>=MinSum && acc.balance>=_am && now>acc.unlockTime)",
+        "pragma_version": "0.4.25"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0x7a4349a749e59a5736efb7826ee3496a2dfd5489.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x7a4349a749e59a5736efb7826ee3496a2dfd5489.sol",
+        "line_number": 23,
+        "code": "{",
+        "pragma_version": "0.4.19"
+    },
+    {
+        "contract_path": "dataset/front_running/eth_tx_order_dependence_minimal.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/front_running/eth_tx_order_dependence_minimal.sol",
+        "line_number": 15,
+        "code": "owner = msg.sender;",
+        "pragma_version": "0.4.16"
+    },
+    {
+        "contract_path": "dataset/reentrancy/etherstore.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/etherstore.sol",
+        "line_number": 1,
+        "code": "/*",
+        "pragma_version": "0.4.10"
+    },
+    {
+        "contract_path": "dataset/reentrancy/reentrancy_simple.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/reentrancy_simple.sol",
+        "line_number": 13,
+        "code": "return userBalance[u];",
+        "pragma_version": "0.4.15"
+    },
+    {
+        "contract_path": "dataset/access_control/proxy.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/access_control/proxy.sol",
+        "line_number": 9,
+        "code": "contract Proxy {",
+        "pragma_version": "0.4.24"
+    },
+    {
+        "contract_path": "dataset/time_manipulation/roulette.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/time_manipulation/roulette.sol",
+        "line_number": 21,
+        "code": "if(now % 15 == 0) { // winner",
+        "pragma_version": "0.4.25"
+    },
+    {
+        "contract_path": "dataset/access_control/simple_suicide.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/access_control/simple_suicide.sol",
+        "line_number": 4,
+        "code": "* @vulnerable_at_lines: 12,13",
+        "pragma_version": "0.4.0"
+    },
+    {
+        "contract_path": "dataset/reentrancy/0xb5e1b1ee15c6fa0e48fce100125569d430f1bd12.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/0xb5e1b1ee15c6fa0e48fce100125569d430f1bd12.sol",
+        "line_number": 23,
+        "code": "public",
+        "pragma_version": "0.4.19"
+    },
+    {
+        "contract_path": "dataset/arithmetic/BECToken.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/arithmetic/BECToken.sol",
+        "line_number": 306,
+        "code": "}",
+        "pragma_version": "0.4.16"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0x4051334adc52057aca763453820cb0e045076ef3.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x4051334adc52057aca763453820cb0e045076ef3.sol",
+        "line_number": 12,
+        "code": "require(_tos.length > 0);",
+        "pragma_version": "0.4.24"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0x39cfd754c85023648bf003bea2dd498c5612abfa.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x39cfd754c85023648bf003bea2dd498c5612abfa.sol",
+        "line_number": 15,
+        "code": "public",
+        "pragma_version": "0.4.18"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0xbaa3de6504690efb064420d89e871c27065cdd52.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0xbaa3de6504690efb064420d89e871c27065cdd52.sol",
+        "line_number": 37,
+        "code": "function withdraw(uint256 amount) public onlyOwner {",
+        "pragma_version": "0.4.23"
+    },
+    {
+        "contract_path": "dataset/reentrancy/0x23a91059fdc9579a9fbd0edc5f2ea0bfdb70deb4.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/0x23a91059fdc9579a9fbd0edc5f2ea0bfdb70deb4.sol",
+        "line_number": 33,
+        "code": "function CashOut(uint _am)",
+        "pragma_version": "0.4.19"
+    },
+    {
+        "contract_path": "dataset/access_control/rubixi.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/access_control/rubixi.sol",
+        "line_number": 112,
+        "code": "function changeMultiplier(uint _mult) onlyowner {",
+        "pragma_version": "0.4.15"
+    },
+    {
+        "contract_path": "dataset/access_control/mapping_write.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/access_control/mapping_write.sol",
+        "line_number": 17,
+        "code": "map.length = key + 1;",
+        "pragma_version": "0.4.24"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0x8fd1e427396ddb511533cf9abdbebd0a7e08da35.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x8fd1e427396ddb511533cf9abdbebd0a7e08da35.sol",
+        "line_number": 88,
+        "code": "public",
+        "pragma_version": "0.4.18"
+    },
+    {
+        "contract_path": "dataset/reentrancy/0xaae1f51cf3339f18b6d3f3bdc75a5facd744b0b8.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/0xaae1f51cf3339f18b6d3f3bdc75a5facd744b0b8.sol",
+        "line_number": 47,
+        "code": "function Collect(uint _am)",
+        "pragma_version": "0.4.19"
+    },
+    {
+        "contract_path": "dataset/denial_of_service/list_dos.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/denial_of_service/list_dos.sol",
+        "line_number": 80,
+        "code": "}",
+        "pragma_version": "0.4.0"
+    },
+    {
+        "contract_path": "dataset/front_running/FindThisHash.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/front_running/FindThisHash.sol",
+        "line_number": 17,
+        "code": "require(hash == sha3(solution));",
+        "pragma_version": "0.4.22"
+    },
+    {
+        "contract_path": "dataset/front_running/ERC20.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/front_running/ERC20.sol",
+        "line_number": 105,
+        "code": "_balances[to] = _balances[to].add(value);",
+        "pragma_version": "0.4.24"
+    },
+    {
+        "contract_path": "dataset/denial_of_service/send_loop.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/denial_of_service/send_loop.sol",
+        "line_number": 13,
+        "code": "mapping (address => uint) public refunds;",
+        "pragma_version": "0.4.24"
+    },
+    {
+        "contract_path": "dataset/reentrancy/reentrancy_insecure.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/reentrancy_insecure.sol",
+        "line_number": 18,
+        "code": "require(success);",
+        "pragma_version": "0.5.0"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0xa46edd6a9a93feec36576ee5048146870ea2c3ae.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0xa46edd6a9a93feec36576ee5048146870ea2c3ae.sol",
+        "line_number": 13,
+        "code": "bytes4 id=bytes4(keccak256(\"transferFrom(address,address,uint256)\"));",
+        "pragma_version": "0.4.18"
+    },
+    {
+        "contract_path": "dataset/other/name_registrar.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/other/name_registrar.sol",
+        "line_number": 20,
+        "code": "function register(bytes32 _name, address _mappedAddress) public {",
+        "pragma_version": "0.4.15"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0x0cbe050f75bc8f8c2d6c0d249fea125fd6e1acc9.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x0cbe050f75bc8f8c2d6c0d249fea125fd6e1acc9.sol",
+        "line_number": 9,
+        "code": "contract Caller {",
+        "pragma_version": "0.4.10"
+    },
+    {
+        "contract_path": "dataset/reentrancy/0x4e73b32ed6c35f570686b89848e5f39f20ecc106.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/0x4e73b32ed6c35f570686b89848e5f39f20ecc106.sol",
+        "line_number": 27,
+        "code": "public",
+        "pragma_version": "0.4.19"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0x958a8f594101d2c0485a52319f29b2647f2ebc06.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x958a8f594101d2c0485a52319f29b2647f2ebc06.sol",
+        "line_number": 55,
+        "code": "_dst.call.value(_value)(_data);",
+        "pragma_version": "0.4.16"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0x39cfd754c85023648bf003bea2dd498c5612abfa.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x39cfd754c85023648bf003bea2dd498c5612abfa.sol",
+        "line_number": 61,
+        "code": "function()",
+        "pragma_version": "0.4.18"
+    },
+    {
+        "contract_path": "dataset/other/crypto_roulette.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/other/crypto_roulette.sol",
+        "line_number": 43,
+        "code": "gamesPlayed.push(game);",
+        "pragma_version": "0.4.19"
+    },
+    {
+        "contract_path": "dataset/denial_of_service/auction.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/denial_of_service/auction.sol",
+        "line_number": 3,
+        "code": "* @author: -",
+        "pragma_version": "0.4.15"
+    },
+    {
+        "contract_path": "dataset/reentrancy/0xaae1f51cf3339f18b6d3f3bdc75a5facd744b0b8.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/0xaae1f51cf3339f18b6d3f3bdc75a5facd744b0b8.sol",
+        "line_number": 19,
+        "code": "function SetMinSum(uint _val)",
+        "pragma_version": "0.4.19"
+    },
+    {
+        "contract_path": "dataset/access_control/wallet_03_wrong_constructor.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/access_control/wallet_03_wrong_constructor.sol",
+        "line_number": 3,
+        "code": "* @author: -",
+        "pragma_version": "0.4.24"
+    },
+    {
+        "contract_path": "dataset/reentrancy/0x627fa62ccbb1c1b04ffaecd72a53e37fc0e17839.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/0x627fa62ccbb1c1b04ffaecd72a53e37fc0e17839.sol",
+        "line_number": 61,
+        "code": "payable",
+        "pragma_version": "0.4.19"
+    },
+    {
+        "contract_path": "dataset/arithmetic/insecure_transfer.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/arithmetic/insecure_transfer.sol",
+        "line_number": 15,
+        "code": "require(balanceOf[msg.sender] >= _value);",
+        "pragma_version": "0.4.10"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0x52d2e0f9b01101a59b38a3d05c80b7618aeed984.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x52d2e0f9b01101a59b38a3d05c80b7618aeed984.sol",
+        "line_number": 29,
+        "code": "}",
+        "pragma_version": "0.4.19"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0xbaa3de6504690efb064420d89e871c27065cdd52.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0xbaa3de6504690efb064420d89e871c27065cdd52.sol",
+        "line_number": 32,
+        "code": "if (msg.value > 0.25 ether) {",
+        "pragma_version": "0.4.23"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0xb11b2fed6c9354f7aa2f658d3b4d7b31d8a13b77.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0xb11b2fed6c9354f7aa2f658d3b4d7b31d8a13b77.sol",
+        "line_number": 16,
+        "code": "}",
+        "pragma_version": "0.4.24"
+    },
+    {
+        "contract_path": "dataset/bad_randomness/blackjack.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/bad_randomness/blackjack.sol",
+        "line_number": 3,
+        "code": "* @source: https://etherscan.io/address/0xa65d59708838581520511d98fb8b5d1f76a96cad#code",
+        "pragma_version": "0.4.9"
+    },
+    {
+        "contract_path": "dataset/arithmetic/BECToken.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/arithmetic/BECToken.sol",
+        "line_number": 218,
+        "code": "*/",
+        "pragma_version": "0.4.16"
+    },
+    {
+        "contract_path": "dataset/reentrancy/0xf015c35649c82f5467c9c74b7f28ee67665aad68.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/0xf015c35649c82f5467c9c74b7f28ee67665aad68.sol",
+        "line_number": 23,
+        "code": "payable",
+        "pragma_version": "0.4.25"
+    },
+    {
+        "contract_path": "dataset/access_control/arbitrary_location_write_simple.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/access_control/arbitrary_location_write_simple.sol",
+        "line_number": 36,
+        "code": "function Destroy() public {",
+        "pragma_version": "0.4.25"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/lotto.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/lotto.sol",
+        "line_number": 5,
+        "code": "*/",
+        "pragma_version": "0.4.18"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0xbebbfe5b549f5db6e6c78ca97cac19d1fb03082c.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0xbebbfe5b549f5db6e6c78ca97cac19d1fb03082c.sol",
+        "line_number": 34,
+        "code": "}",
+        "pragma_version": "0.4.24"
+    },
+    {
+        "contract_path": "dataset/denial_of_service/dos_number.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/denial_of_service/dos_number.sol",
+        "line_number": 29,
+        "code": "}",
+        "pragma_version": "0.4.25"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0x4a66ad0bca2d700f11e1f2fc2c106f7d3264504c.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x4a66ad0bca2d700f11e1f2fc2c106f7d3264504c.sol",
+        "line_number": 14,
+        "code": "require(msg.sender == 0x9797055B68C5DadDE6b3c7d5D80C9CFE2eecE6c9);",
+        "pragma_version": "0.4.18"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0x70f9eddb3931491aab1aeafbc1e7f1ca2a012db4.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x70f9eddb3931491aab1aeafbc1e7f1ca2a012db4.sol",
+        "line_number": 15,
+        "code": "if(msg.value>1 ether)",
+        "pragma_version": "0.4.19"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0xb620cee6b52f96f3c6b253e6eea556aa2d214a99.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0xb620cee6b52f96f3c6b253e6eea556aa2d214a99.sol",
+        "line_number": 67,
+        "code": "function getPrize() public constant returns(uint256) {",
+        "pragma_version": "0.4.23"
+    },
+    {
+        "contract_path": "dataset/reentrancy/0x8c7777c45481dba411450c228cb692ac3d550344.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/0x8c7777c45481dba411450c228cb692ac3d550344.sol",
+        "line_number": 36,
+        "code": "payable",
+        "pragma_version": "0.4.19"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0x19cf8481ea15427a98ba3cdd6d9e14690011ab10.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x19cf8481ea15427a98ba3cdd6d9e14690011ab10.sol",
+        "line_number": 249,
+        "code": "}",
+        "pragma_version": "0.4.11"
+    },
+    {
+        "contract_path": "dataset/reentrancy/0x01f8c4e3fa3edeb29e514cba738d87ce8c091d3f.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/0x01f8c4e3fa3edeb29e514cba738d87ce8c091d3f.sol",
+        "line_number": 36,
+        "code": "intitalized = true;",
+        "pragma_version": "0.4.19"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0xd2018bfaa266a9ec0a1a84b061640faa009def76.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0xd2018bfaa266a9ec0a1a84b061640faa009def76.sol",
+        "line_number": 5,
+        "code": "*/",
+        "pragma_version": "0.4.19"
+    },
+    {
+        "contract_path": "dataset/reentrancy/0x4e73b32ed6c35f570686b89848e5f39f20ecc106.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/0x4e73b32ed6c35f570686b89848e5f39f20ecc106.sol",
+        "line_number": 31,
+        "code": "}",
+        "pragma_version": "0.4.19"
+    },
+    {
+        "contract_path": "dataset/denial_of_service/dos_number.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/denial_of_service/dos_number.sol",
+        "line_number": 35,
+        "code": "require(numElements>1500);",
+        "pragma_version": "0.4.25"
+    },
+    {
+        "contract_path": "dataset/arithmetic/overflow_simple_add.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/arithmetic/overflow_simple_add.sol",
+        "line_number": 5,
+        "code": "*/",
+        "pragma_version": "0.4.25"
+    },
+    {
+        "contract_path": "dataset/bad_randomness/old_blockhash.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/bad_randomness/old_blockhash.sol",
+        "line_number": 15,
+        "code": "bytes32 guess;",
+        "pragma_version": "0.4.24"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0xbaa3de6504690efb064420d89e871c27065cdd52.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0xbaa3de6504690efb064420d89e871c27065cdd52.sol",
+        "line_number": 10,
+        "code": "modifier onlyOwner { if (msg.sender == Owner) _; } address Owner = msg.sender;",
+        "pragma_version": "0.4.23"
+    },
+    {
+        "contract_path": "dataset/reentrancy/etherbank.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/reentrancy/etherbank.sol",
+        "line_number": 3,
+        "code": "* @author: -",
+        "pragma_version": "0.4.0"
+    },
+    {
+        "contract_path": "dataset/unchecked_low_level_calls/0x52d2e0f9b01101a59b38a3d05c80b7618aeed984.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/unchecked_low_level_calls/0x52d2e0f9b01101a59b38a3d05c80b7618aeed984.sol",
+        "line_number": 14,
+        "code": "function EtherGet() {",
+        "pragma_version": "0.4.19"
+    },
+    {
+        "contract_path": "dataset/denial_of_service/list_dos.sol",
+        "full_path": "../dataset/smartbugs-curated/dataset/denial_of_service/list_dos.sol",
+        "line_number": 70,
+        "code": "buddy.send(amount * 5/100);",
+        "pragma_version": "0.4.0"
+    }
+]
