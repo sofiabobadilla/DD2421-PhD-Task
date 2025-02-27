@@ -48,5 +48,6 @@ jobs:
         # You can adjust this based on your specific needs
         for notebook in $(find . -name "*.ipynb" -not -path "*/\.*"); do
           echo "Testing $notebook"
-          pytest --nbval-lax "$notebook"
+          poetry run pytest --nbval-lax "$notebook"  # Run pytest inside Poetry's virtual environment
         done
+        
