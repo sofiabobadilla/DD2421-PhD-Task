@@ -1,4 +1,4 @@
-,line_number,label,code_enc,tokens,has_external_call,has_require_assert,pragma_major,pragma_minor,pragma_patch
+index,line_number,label,code_enc,tokens,has_external_call,has_require_assert,pragma_major,pragma_minor,pragma_patch
 152,0.0008146639511201629,1,35,8,1,0,0,4,25
 146,0.000407331975560081,1,123,4,0,0,0,4,25
 216,0.048879837067209775,0,48,4,1,0,0,4,0
