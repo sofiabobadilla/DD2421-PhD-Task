@@ -36,13 +36,41 @@ Both MM and PM will be test with each others dataset to assess the performance o
 
 Accuracy
 
-| Test dataset| MM| PM|
-|-|-|-|
-| Raw smartbugs-curated| 0.88| 0.87|
-| Exploitable smartbugs-curated| 0.42| 0.84|
 
 
-
+<table>
+  <tr>
+    <th rowspan="2">Metric</th>
+    <th colspan="3">MM</th>
+    <th colspan="3">PM</th>
+  </tr>
+  <tr>
+    <th>Accuracy</th>
+    <th>Precision</th>
+    <th>Recall</th>
+    <th>Accuracy</th>
+    <th>Precision</th>
+    <th>Recall</th>
+  </tr>
+  <tr>
+    <td>Raw smartbugs-curated</td>
+    <td>0.88</td>
+    <td>0.84</td>
+    <td>0.95</td>
+    <td>0.88</td>
+    <td>0.84</td>
+    <td>0.95</td>
+  </tr>
+  <tr>
+    <td>Exploitable smartbugs-curated</td>
+    <td>0.42</td>
+    <td>0.52</td>
+    <td>0.52</td>
+    <td>0.84</td>
+    <td>0.83</td>
+    <td>0.92</td>
+  </tr>
+</table>
 
 
 
