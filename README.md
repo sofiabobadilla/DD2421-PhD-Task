@@ -70,15 +70,6 @@ Accuracy
     <td>0.833</td>
     <td>0.925</td>
   </tr>
-  <tr>
-    <td>Exploitable smartbugs-curated (Only True Positives)</td>
-    <td>0.518</td>
-    <td>1</td>
-    <td>0.518</td>
-    <td>0.925</td>
-    <td>1</td>
-    <td>0.925</td>
-  </tr>
 </table>
 
 
