@@ -40,7 +40,7 @@ Accuracy
 
 <table>
   <tr>
-    <th rowspan="2">Metric</th>
+    <th rowspan="2">Dataset</th>
     <th colspan="3">MM</th>
     <th colspan="3">PM</th>
   </tr>
@@ -70,6 +70,15 @@ Accuracy
     <td>0.833</td>
     <td>0.925</td>
   </tr>
+  <tr>
+    <td>Exploitable smartbugs-curated (Only True Positives)</td>
+    <td>0.518</td>
+    <td>1</td>
+    <td>0.518</td>
+    <td>0.925</td>
+    <td>1</td>
+    <td>0.925</td>
+  </tr>
 </table>
 
 
@@ -93,4 +102,4 @@ Accuracy
 
 
 ## Acknowledgements
-Thanks to @vivi365 for her key advise on ML for vulnerability detection.
+Thanks to [@vivi365](https://github.com/vivi365) for her key advise on ML for vulnerability detection.
