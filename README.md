@@ -54,21 +54,21 @@ Accuracy
   </tr>
   <tr>
     <td>Raw smartbugs-curated</td>
-    <td>0.88</td>
+    <td>0.887</td>
     <td>0.84</td>
-    <td>0.95</td>
-    <td>0.88</td>
-    <td>0.84</td>
-    <td>0.95</td>
+    <td>0.954</td>
+    <td>0.426</td>
+    <td>0.44</td>
+    <td>0.659</td>
   </tr>
   <tr>
     <td>Exploitable smartbugs-curated</td>
     <td>0.42</td>
-    <td>0.52</td>
-    <td>0.52</td>
-    <td>0.84</td>
-    <td>0.83</td>
-    <td>0.92</td>
+    <td>0.518</td>
+    <td>0.518</td>
+    <td>0.844</td>
+    <td>0.833</td>
+    <td>0.925</td>
   </tr>
 </table>
 
