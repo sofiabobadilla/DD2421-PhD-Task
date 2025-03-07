@@ -4,11 +4,11 @@ Repository for the PhD assignment of course DD3431 at KTH.
 
 ## GOAL & Overview
 
-This PhD project aims to apply the fundamental learning of DD3431 Machine Learning course on the PhD topic of the author. 
+This PhD project aims to apply the fundamental learning of the DD3431 Machine Learning course on the PhD topic of the author. 
 
-In this case the project will be directly related to smart contract security.
+In this case, the project will be directly related to smart contract security.
 
-Using as dataset smartbugs-curated and the recent-published exploit for the dataset sb-heist, this experiment will compare the performance of two models train with different configurations of the same dataset for vulnerable line identification.
+Using the dataset smartbugs-curated and the recent-published exploit for the dataset sb-heist, this experiment will compare the performance of two models trained with different configurations of the same dataset for vulnerable line identification.
 
 
 Mix Model (MM): 
@@ -79,11 +79,11 @@ Accuracy
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/yourusername/DD2421-PhD-Task.git
+    git clone https://github.com/yourusername/DD3431-PhD-Task.git
     ```
 2. Change to the repository directory:
     ```sh
-    cd DD2421-PhD-Task
+    cd DD3431-PhD-Task
     ```
 3. Install the required dependencies using Poetry:
     ```sh
