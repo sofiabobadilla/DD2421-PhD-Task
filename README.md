@@ -4,7 +4,7 @@ Repository for the PhD assignment of course DD3431 at KTH.
 
 ## GOAL & Overview
 
-This PhD project aims to apply the fundamental learning of DD2421 Machine Learning course on the PhD topic of the author. 
+This PhD project aims to apply the fundamental learning of DD3431 Machine Learning course on the PhD topic of the author. 
 
 In this case the project will be directly related to smart contract security.
 
